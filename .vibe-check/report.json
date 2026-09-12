@@ -1,0 +1,5738 @@
+{
+  "version": "0.56.0",
+  "timestamp": "2026-09-01T20:57:19.713Z",
+  "score": 82,
+  "grade": "B",
+  "checks": [
+    {
+      "name": "structure",
+      "score": 80,
+      "grade": "B",
+      "details": {
+        "found": [
+          "pubspec.yaml",
+          "analysis_options.yaml",
+          ".gitignore",
+          "README.md",
+          "lockfile"
+        ],
+        "missing": [
+          "LICENSE"
+        ],
+        "srcFiles": 108,
+        "testFiles": 3,
+        "source": "file-inventory",
+        "testRatio": "3%",
+        "monorepo": true,
+        "workspaceTool": "none",
+        "packages": 2,
+        "status": "failed",
+        "scoreMode": "available-scored",
+        "scoreImpact": true
+      },
+      "issues": [
+        {
+          "severity": "error",
+          "message": "Missing LICENSE — Open source license",
+          "rule": "missing-file",
+          "fingerprint": "ccb9c85290ae8990"
+        },
+        {
+          "severity": "warning",
+          "message": "Low test-to-source ratio: 3 tests for 108 source files (3%)",
+          "rule": "low-test-ratio",
+          "fingerprint": "64f95796a35b3585"
+        }
+      ],
+      "duration": 11,
+      "status": "failed"
+    },
+    {
+      "name": "lint",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "errors": 0,
+        "warnings": 0,
+        "linter": "dart_analyze",
+        "toolRuns": [
+          {
+            "tool": "dart",
+            "command": "dart --version",
+            "cwd": "G:\\Datos\\coop_campooste",
+            "analyzerId": "lint",
+            "projectId": "root",
+            "projectPath": ".",
+            "analyzer": "lint",
+            "status": "success",
+            "exitCode": 0,
+            "ok": true,
+            "durationMs": 972,
+            "output": "Dart SDK version: 3.13.2 (stable) (Tue Aug 25 01:01:12 2026 -0700) on \"windows_x64\"",
+            "notFound": false
+          },
+          {
+            "tool": "dart",
+            "command": "dart analyze --format=machine 2>/dev/null || true",
+            "cwd": "G:\\Datos\\coop_campooste",
+            "analyzerId": "lint",
+            "projectId": "root",
+            "projectPath": ".",
+            "analyzer": "lint",
+            "status": "failed",
+            "exitCode": 1,
+            "ok": false,
+            "durationMs": 69,
+            "output": "El sistema no puede encontrar la ruta especificada.\r\n\"true\" no se reconoce como un comando interno o externo,\r\nprograma o archivo por lotes ejecutable.",
+            "notFound": false
+          }
+        ],
+        "status": "passed",
+        "scoreMode": "available-scored",
+        "scoreImpact": true
+      },
+      "issues": [],
+      "duration": 1042,
+      "status": "passed"
+    },
+    {
+      "name": "types",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "errors": 0,
+        "ok": true,
+        "projects": [
+          {
+            "id": "root",
+            "path": ".",
+            "tool": "dart",
+            "mode": "project",
+            "command": "dart analyze --format=machine",
+            "authoritative": true,
+            "reason": "root pubspec is authoritative"
+          }
+        ],
+        "excluded": [],
+        "excludedRootFallback": false,
+        "strategy": "dart-project-targets",
+        "toolRuns": [
+          {
+            "tool": "dart",
+            "command": "dart analyze --format=machine 2>/dev/null || true",
+            "cwd": "G:\\Datos\\coop_campooste",
+            "analyzerId": "types",
+            "projectId": "root",
+            "projectPath": ".",
+            "analyzer": "types",
+            "status": "failed",
+            "exitCode": 1,
+            "ok": false,
+            "durationMs": 14,
+            "output": "El sistema no puede encontrar la ruta especificada.\r\n\"true\" no se reconoce como un comando interno o externo,\r\nprograma o archivo por lotes ejecutable.",
+            "notFound": false
+          }
+        ],
+        "status": "passed",
+        "scoreMode": "available-scored",
+        "scoreImpact": true
+      },
+      "issues": [],
+      "duration": 15,
+      "status": "passed"
+    },
+    {
+      "name": "type-safety",
+      "score": 95,
+      "grade": "A",
+      "details": {
+        ": any": 3,
+        "source": "file-inventory",
+        "filesScanned": 58,
+        "totalUnsafe": 3,
+        "projects": [
+          {
+            "id": "android",
+            "name": "android",
+            "path": "android",
+            "language": "java",
+            "files": 0,
+            "issues": 0
+          },
+          {
+            "id": "backend",
+            "name": "backend",
+            "path": "backend",
+            "language": "typescript",
+            "files": 58,
+            "issues": 3
+          }
+        ],
+        "status": "passed",
+        "scoreMode": "available-scored",
+        "scoreImpact": true
+      },
+      "issues": [
+        {
+          "severity": "warning",
+          "message": ": any",
+          "file": "backend/src/modules/auth/jwt.strategy.ts",
+          "line": 24,
+          "rule": "unsafe-type",
+          "fingerprint": "5401af68de3a2d54"
+        },
+        {
+          "severity": "warning",
+          "message": ": any",
+          "file": "backend/src/modules/compras/compras.controller.ts",
+          "line": 23,
+          "rule": "unsafe-type",
+          "fingerprint": "1047eeaddb933567"
+        },
+        {
+          "severity": "warning",
+          "message": ": any",
+          "file": "backend/src/modules/compras/compras.service.ts",
+          "line": 18,
+          "rule": "unsafe-type",
+          "fingerprint": "e2e9e7d6ca5d9eba"
+        }
+      ],
+      "duration": 17,
+      "status": "passed"
+    },
+    {
+      "name": "standards",
+      "score": 74,
+      "grade": "C",
+      "details": {
+        "filesScanned": 108,
+        "codeSmells": 35,
+        "largeFiles": 0,
+        "namingViolations": 0,
+        "source": "file-inventory",
+        "status": "passed",
+        "scoreMode": "available-scored",
+        "scoreImpact": true
+      },
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "console.log in production code",
+          "file": "backend/src/main.ts",
+          "line": 14,
+          "rule": "console.log",
+          "fingerprint": "5e687eb0e0da51d2"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/models/movement.dart",
+          "line": 58,
+          "rule": "loose equality",
+          "fingerprint": "5800559c4b228163"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/models/movement.dart",
+          "line": 59,
+          "rule": "loose equality",
+          "fingerprint": "5800559c4b228163"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/models/movement.dart",
+          "line": 60,
+          "rule": "loose equality",
+          "fingerprint": "5800559c4b228163"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/models/socio.dart",
+          "line": 23,
+          "rule": "loose equality",
+          "fingerprint": "7f3f6cd58c25932a"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/providers/account_provider.dart",
+          "line": 50,
+          "rule": "loose equality",
+          "fingerprint": "a40a53f3cd72102e"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/providers/carrito_provider.dart",
+          "line": 22,
+          "rule": "loose equality",
+          "fingerprint": "b8cf0a67bc385b74"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/providers/carrito_provider.dart",
+          "line": 35,
+          "rule": "loose equality",
+          "fingerprint": "b8cf0a67bc385b74"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/providers/carrito_provider.dart",
+          "line": 40,
+          "rule": "loose equality",
+          "fingerprint": "b8cf0a67bc385b74"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/providers/producto_provider.dart",
+          "line": 38,
+          "rule": "loose equality",
+          "fingerprint": "13e76fb6bcff8e69"
+        },
+        {
+          "severity": "warning",
+          "message": "Use const/let instead of var",
+          "file": "lib/screens/admin/admin_productos_screen.dart",
+          "line": 32,
+          "rule": "var keyword",
+          "fingerprint": "15df58244a3b08ea"
+        },
+        {
+          "severity": "warning",
+          "message": "Use const/let instead of var",
+          "file": "lib/screens/admin/admin_productos_screen.dart",
+          "line": 140,
+          "rule": "var keyword",
+          "fingerprint": "15df58244a3b08ea"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/screens/admin/admin_productos_screen.dart",
+          "line": 173,
+          "rule": "loose equality",
+          "fingerprint": "97369425299e1071"
+        },
+        {
+          "severity": "warning",
+          "message": "Use const/let instead of var",
+          "file": "lib/screens/admin/admin_productos_screen.dart",
+          "line": 209,
+          "rule": "var keyword",
+          "fingerprint": "15df58244a3b08ea"
+        },
+        {
+          "severity": "warning",
+          "message": "Use const/let instead of var",
+          "file": "lib/screens/admin/admin_productos_screen.dart",
+          "line": 212,
+          "rule": "var keyword",
+          "fingerprint": "15df58244a3b08ea"
+        },
+        {
+          "severity": "warning",
+          "message": "Use const/let instead of var",
+          "file": "lib/screens/admin.dart",
+          "line": 31,
+          "rule": "var keyword",
+          "fingerprint": "ebe46ad3ef7f2a8d"
+        },
+        {
+          "severity": "warning",
+          "message": "Use const/let instead of var",
+          "file": "lib/screens/admin.dart",
+          "line": 139,
+          "rule": "var keyword",
+          "fingerprint": "ebe46ad3ef7f2a8d"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/screens/admin.dart",
+          "line": 172,
+          "rule": "loose equality",
+          "fingerprint": "0823da3cb819f0b6"
+        },
+        {
+          "severity": "warning",
+          "message": "Use const/let instead of var",
+          "file": "lib/screens/admin.dart",
+          "line": 208,
+          "rule": "var keyword",
+          "fingerprint": "ebe46ad3ef7f2a8d"
+        },
+        {
+          "severity": "warning",
+          "message": "Use const/let instead of var",
+          "file": "lib/screens/admin.dart",
+          "line": 211,
+          "rule": "var keyword",
+          "fingerprint": "ebe46ad3ef7f2a8d"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/screens/auth/login_screen.dart",
+          "line": 85,
+          "rule": "loose equality",
+          "fingerprint": "7e176a30d89f009c"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/screens/auth/login_screen.dart",
+          "line": 112,
+          "rule": "loose equality",
+          "fingerprint": "7e176a30d89f009c"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/screens/cuentas/account_detail_screen.dart",
+          "line": 29,
+          "rule": "loose equality",
+          "fingerprint": "ee092cae3ccf1e5e"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/screens/tienda/detalle_producto_screen.dart",
+          "line": 17,
+          "rule": "loose equality",
+          "fingerprint": "9ca2751d4c9fea9a"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/screens/tienda/mis_compras_screen.dart",
+          "line": 84,
+          "rule": "loose equality",
+          "fingerprint": "4c2f330b5aa3dc15"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/screens/tienda/tienda_screen.dart",
+          "line": 97,
+          "rule": "loose equality",
+          "fingerprint": "799af9f74e4ffe76"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/services/account_service.dart",
+          "line": 13,
+          "rule": "loose equality",
+          "fingerprint": "1f6cc6ccee95b20c"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/services/auth_service.dart",
+          "line": 32,
+          "rule": "loose equality",
+          "fingerprint": "cc18b443ac02b54b"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/services/auth_service.dart",
+          "line": 61,
+          "rule": "loose equality",
+          "fingerprint": "cc18b443ac02b54b"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/services/auth_service.dart",
+          "line": 64,
+          "rule": "loose equality",
+          "fingerprint": "cc18b443ac02b54b"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/services/compra_service.dart",
+          "line": 28,
+          "rule": "loose equality",
+          "fingerprint": "fd7e4e7378f65aa9"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/services/compra_service.dart",
+          "line": 45,
+          "rule": "loose equality",
+          "fingerprint": "fd7e4e7378f65aa9"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/services/producto_service.dart",
+          "line": 19,
+          "rule": "loose equality",
+          "fingerprint": "6d881e2ab58c7f3e"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/services/producto_service.dart",
+          "line": 36,
+          "rule": "loose equality",
+          "fingerprint": "6d881e2ab58c7f3e"
+        },
+        {
+          "severity": "warning",
+          "message": "Use === instead of ==",
+          "file": "lib/services/producto_service.dart",
+          "line": 56,
+          "rule": "loose equality",
+          "fingerprint": "6d881e2ab58c7f3e"
+        }
+      ],
+      "duration": 37,
+      "status": "passed"
+    },
+    {
+      "name": "complexity",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "totalFiles": 108,
+        "totalLines": 5474,
+        "longFunctions": 0,
+        "complexFunctions": 0,
+        "functionCount": 123,
+        "source": "file-inventory",
+        "status": "passed",
+        "scoreMode": "available-scored",
+        "scoreImpact": true
+      },
+      "issues": [],
+      "duration": 14,
+      "status": "passed"
+    },
+    {
+      "name": "duplication",
+      "score": 90,
+      "grade": "A",
+      "details": {
+        "filesScanned": 108,
+        "totalSourceLines": 5474,
+        "duplicateBlocks": 17,
+        "duplicationPct": "8.6%",
+        "tool": "built-in",
+        "status": "passed",
+        "scoreMode": "available-scored",
+        "scoreImpact": true
+      },
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Duplicate (113 lines): labelText: 'Precio (RD$)',",
+          "file": "lib/screens/admin.dart:104 ↔ lib/screens/admin/admin_productos_screen.dart:105",
+          "rule": "duplicate-code",
+          "snippet": "labelText: 'Precio (RD$)',",
+          "fingerprint": "1225961f1dae6cc7"
+        },
+        {
+          "severity": "warning",
+          "message": "Duplicate (98 lines): class AdminProductosScreen extends StatefulWidget {",
+          "file": "lib/screens/admin.dart:7 ↔ lib/screens/admin/admin_productos_screen.dart:7",
+          "rule": "duplicate-code",
+          "snippet": "class AdminProductosScreen extends StatefulWidget {",
+          "fingerprint": "e291998ed64a4dd5"
+        },
+        {
+          "severity": "warning",
+          "message": "Duplicate (49 lines): @Injectable()",
+          "file": "src/modules/compras/compras.service.ts:8 ↔ backend/src/modules/compras/compras.service.ts:8",
+          "rule": "duplicate-code",
+          "snippet": "@Injectable()",
+          "fingerprint": "40723c40f300219c"
+        },
+        {
+          "severity": "warning",
+          "message": "Duplicate (29 lines): export class CreateSocioDto {",
+          "file": "backend/src/modules/socios/dto/create-socio.dto.ts:3 ↔ backend/src/modules/auth/dto/register.dto.ts:3",
+          "rule": "duplicate-code",
+          "snippet": "export class CreateSocioDto {",
+          "fingerprint": "179b34fb5db2da00"
+        },
+        {
+          "severity": "warning",
+          "message": "Duplicate (26 lines): @Injectable()",
+          "file": "src/modules/productos/productos.service.ts:6 ↔ backend/src/modules/productos/productos.service.ts:6",
+          "rule": "duplicate-code",
+          "snippet": "@Injectable()",
+          "fingerprint": "2948c29d6a949d7f"
+        },
+        {
+          "severity": "warning",
+          "message": "Duplicate (20 lines): ),",
+          "file": "lib/screens/auth/register_screen.dart:109 ↔ lib/screens/auth/login_screen.dart:92",
+          "rule": "duplicate-code",
+          "snippet": "),",
+          "fingerprint": "ba2e393df82a41a3"
+        },
+        {
+          "severity": "warning",
+          "message": "Duplicate (20 lines): ),",
+          "file": "lib/screens/tienda/detalle_producto_screen.dart:89 ↔ lib/screens/tienda/carrito_screen.dart:154",
+          "rule": "duplicate-code",
+          "snippet": "),",
+          "fingerprint": "72d6708ec40d543f"
+        },
+        {
+          "severity": "warning",
+          "message": "Duplicate (20 lines): @Entity('detalles_compras')",
+          "file": "src/modules/compras/entities/detalle-compra.entity.ts:5 ↔ backend/src/modules/compras/entities/detalle-compra.entity.ts:5",
+          "rule": "duplicate-code",
+          "snippet": "@Entity('detalles_compras')",
+          "fingerprint": "a924b53a39485e62"
+        },
+        {
+          "severity": "warning",
+          "message": "Duplicate (19 lines): },",
+          "file": "lib/screens/tienda/tienda_screen.dart:206 ↔ lib/screens/tienda/carrito_screen.dart:155",
+          "rule": "duplicate-code",
+          "snippet": "},",
+          "fingerprint": "37e36ae09b37097f"
+        },
+        {
+          "severity": "warning",
+          "message": "Duplicate (16 lines): }",
+          "file": "lib/screens/tienda/carrito_screen.dart:157 ↔ lib/screens/admin/admin_productos_screen.dart:190",
+          "rule": "duplicate-code",
+          "snippet": "}",
+          "fingerprint": "d8485097f2497464"
+        },
+        {
+          "severity": "warning",
+          "message": "Duplicate (14 lines): fechaIngreso: DateTime.tryParse(json['fecha_ingreso'] ?? '') ?? DateTime.now(),",
+          "file": "lib/models/user_model.dart:30 ↔ lib/models/socio.dart:34",
+          "rule": "duplicate-code",
+          "snippet": "fechaIngreso: DateTime.tryParse(json['fecha_ingreso'] ?? '') ?? DateTime.now(),",
+          "fingerprint": "abcbb91759399ba8"
+        },
+        {
+          "severity": "warning",
+          "message": "Duplicate (13 lines): const RecentMovements({super.key, required this.movements, this.isLoading = false});",
+          "file": "lib/screens/dashboard/widgets/recent_movements.dart:9 ↔ lib/screens/dashboard/widgets/quick_actions.dart:5",
+          "rule": "duplicate-code",
+          "snippet": "const RecentMovements({super.key, required this.movements, this.isLoading = false});",
+          "fingerprint": "deb11c56fd0433b0"
+        },
+        {
+          "severity": "warning",
+          "message": "Duplicate (13 lines): @Entity('compras')",
+          "file": "src/modules/compras/entities/compra.entity.ts:4 ↔ backend/src/modules/compras/entities/compra.entity.ts:4",
+          "rule": "duplicate-code",
+          "snippet": "@Entity('compras')",
+          "fingerprint": "6f063609afffff42"
+        },
+        {
+          "severity": "warning",
+          "message": "Duplicate (12 lines): bool _obscureConfirm = true;",
+          "file": "lib/screens/auth/register_screen.dart:25 ↔ lib/screens/auth/login_screen.dart:19",
+          "rule": "duplicate-code",
+          "snippet": "bool _obscureConfirm = true;",
+          "fingerprint": "fe2b897fa9b4d7bc"
+        },
+        {
+          "severity": "warning",
+          "message": "Duplicate (10 lines): return this.retirosService.findAll({",
+          "file": "backend/src/modules/retiros/retiros.controller.ts:17 ↔ backend/src/modules/prestamos/prestamos.controller.ts:16",
+          "rule": "duplicate-code",
+          "snippet": "return this.retirosService.findAll({",
+          "fingerprint": "89a4972f3bc38642"
+        },
+        {
+          "severity": "warning",
+          "message": "Duplicate (9 lines): const SizedBox(height: 30),",
+          "file": "lib/screens/auth/register_screen.dart:151 ↔ lib/screens/auth/login_screen.dart:134",
+          "rule": "duplicate-code",
+          "snippet": "const SizedBox(height: 30),",
+          "fingerprint": "a471274dbf78f315"
+        },
+        {
+          "severity": "warning",
+          "message": "Duplicate (9 lines): @Req() req,",
+          "file": "src/modules/compras/compras.controller.ts:12 ↔ backend/src/modules/compras/compras.controller.ts:22",
+          "rule": "duplicate-code",
+          "snippet": "@Req() req,",
+          "fingerprint": "f440af1b6cad4011"
+        }
+      ],
+      "duration": 564,
+      "status": "passed"
+    },
+    {
+      "name": "error-handling",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "emptyCatch": 0,
+        "throwString": 0,
+        "floatingPromises": 0,
+        "jsonParseUnsafe": 0,
+        "infiniteLoops": 0,
+        "source": "file-inventory",
+        "tool": "built-in",
+        "projects": [
+          {
+            "id": "android",
+            "name": "android",
+            "path": "android",
+            "files": 0,
+            "issues": 0
+          },
+          {
+            "id": "backend",
+            "name": "backend",
+            "path": "backend",
+            "files": 58,
+            "issues": 0
+          }
+        ],
+        "status": "passed",
+        "scoreMode": "available-scored",
+        "scoreImpact": true
+      },
+      "issues": [
+        {
+          "severity": "info",
+          "message": "Server with no process.on('unhandledRejection') handler — uncaught promise rejections crash in Node 15+",
+          "rule": "no-rejection-handler",
+          "fingerprint": "1aece19b98a0dc20"
+        }
+      ],
+      "duration": 15,
+      "status": "passed"
+    },
+    {
+      "name": "react",
+      "status": "skipped",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "skipped": true,
+        "status": "skipped",
+        "scoreMode": "not-applicable",
+        "scoreImpact": false,
+        "reason": "not applicable to this stack (requires framework: react)"
+      },
+      "issues": [],
+      "duration": 0
+    },
+    {
+      "name": "flutter",
+      "score": 98,
+      "grade": "A",
+      "details": {
+        "packages": [
+          {
+            "name": "coop_campooste",
+            "path": ".",
+            "kind": "app",
+            "sourceFiles": 41,
+            "unitTests": 0,
+            "widgetTests": 1,
+            "integrationTests": 0,
+            "generatedFiles": 0,
+            "hasAnalysisOptions": true,
+            "hasFlutterLints": true,
+            "hasFlutterTest": true,
+            "hasIntegrationTestDep": false
+          }
+        ],
+        "metrics": [
+          {
+            "id": "packages",
+            "label": "Flutter packages",
+            "value": 1,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "apps",
+            "label": "Flutter apps",
+            "value": 1,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "sourceFiles",
+            "label": "Dart source files",
+            "value": 41,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "widgetTests",
+            "label": "Widget tests",
+            "value": 1,
+            "unit": "count",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "integrationTests",
+            "label": "Integration tests",
+            "value": 0,
+            "unit": "count",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "generatedFiles",
+            "label": "Generated Dart files",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          }
+        ],
+        "rootAnalysisOptions": true,
+        "sourceFiles": 41,
+        "unitTests": 0,
+        "widgetTests": 1,
+        "integrationTests": 0,
+        "generatedFiles": 0,
+        "errors": 0,
+        "warnings": 0,
+        "infos": 1,
+        "status": "passed",
+        "scoreMode": "available-unscored",
+        "scoreImpact": false,
+        "advisoryFindings": true
+      },
+      "issues": [
+        {
+          "severity": "info",
+          "file": ".",
+          "rule": "missing-integration-tests",
+          "message": ". is a Flutter app but has no integration_test/ coverage",
+          "fingerprint": "92a8ae14877a233b"
+        }
+      ],
+      "duration": 5,
+      "status": "passed"
+    },
+    {
+      "name": "accessibility",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "skipped": true,
+        "reason": "no frontend app projects detected",
+        "projects": [],
+        "status": "skipped",
+        "scoreMode": "not-applicable",
+        "scoreImpact": false
+      },
+      "issues": [],
+      "duration": 0,
+      "status": "skipped"
+    },
+    {
+      "name": "docs",
+      "score": 30,
+      "grade": "F",
+      "details": {
+        "readmeLines": 18,
+        "totalExports": 64,
+        "documentedExports": 0,
+        "documentedPct": "0%",
+        "hasChangelog": false,
+        "source": "file-inventory",
+        "status": "failed",
+        "scoreMode": "available-scored",
+        "scoreImpact": true
+      },
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Only 0% of exports have documentation (0/64)",
+          "rule": "undocumented-exports",
+          "fingerprint": "7cda78717960d633"
+        },
+        {
+          "severity": "info",
+          "message": "No CHANGELOG.md — version history not documented",
+          "rule": "no-changelog",
+          "fingerprint": "6dd401cdabefe4d3"
+        }
+      ],
+      "duration": 12,
+      "status": "failed"
+    },
+    {
+      "name": "best-practices",
+      "score": 70,
+      "grade": "C",
+      "details": {
+        "practicesChecked": 17,
+        "practicesFollowed": 5,
+        "adherence": "29%",
+        "status": "passed",
+        "scoreMode": "available-scored",
+        "scoreImpact": true
+      },
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "No .github/workflows/ — no CI/CD automation. Add GitHub Actions for automated testing and deployment.",
+          "rule": "no-ci",
+          "fingerprint": "e79fd6e75faf309b"
+        },
+        {
+          "severity": "info",
+          "message": "No engine constraints (engines in package.json or .nvmrc) — Node version not pinned",
+          "rule": "pin-node-version",
+          "fingerprint": "66056cdfa2b3e3d5"
+        },
+        {
+          "severity": "info",
+          "message": "package.json missing repository field — provenance attestation won't link to source",
+          "rule": "repository-field",
+          "fingerprint": "e49fce2344a7e8ff"
+        },
+        {
+          "severity": "info",
+          "message": "No SECURITY.md — users don't know how to report vulnerabilities",
+          "rule": "security-policy",
+          "fingerprint": "c0a8d313f09a719f"
+        },
+        {
+          "severity": "info",
+          "message": "No CODEOWNERS file — no mandatory reviewers for critical paths",
+          "rule": "codeowners",
+          "fingerprint": "28250dbf571727ca"
+        },
+        {
+          "severity": "info",
+          "message": "No CONTRIBUTING.md — onboarding is harder for new contributors",
+          "rule": "contributing-guide",
+          "fingerprint": "dfd766ff33549a0f"
+        },
+        {
+          "severity": "info",
+          "message": "Has .env files but no .env.example — new developers won't know what vars are needed",
+          "rule": "env-example",
+          "fingerprint": "2d37c09bb2bdee6b"
+        },
+        {
+          "severity": "info",
+          "message": "No pre-commit hooks (husky/lefthook) — lint/format not enforced before commit",
+          "rule": "pre-commit-hooks",
+          "fingerprint": "57d0f722ea2d64a5"
+        },
+        {
+          "severity": "info",
+          "message": "No Dependabot/Renovate — dependency updates are manual and often forgotten",
+          "rule": "automated-deps",
+          "fingerprint": "5462388e77d7ac60"
+        },
+        {
+          "severity": "info",
+          "message": "No formatter config (Prettier/Biome/.editorconfig) — inconsistent code formatting",
+          "rule": "formatter-config",
+          "fingerprint": "f64a3df6dc6b369a"
+        },
+        {
+          "severity": "info",
+          "message": "No test coverage configuration — coverage thresholds not enforced",
+          "rule": "coverage-config",
+          "fingerprint": "73e8765a0974dbf5"
+        },
+        {
+          "severity": "info",
+          "message": "No commit convention enforcement (commitlint/changesets) — changelog generation is manual",
+          "rule": "conventional-commits",
+          "fingerprint": "4f070ba2249703f9"
+        }
+      ],
+      "duration": 5,
+      "status": "passed"
+    },
+    {
+      "name": "env-validation",
+      "score": 65,
+      "grade": "C",
+      "details": {
+        "envFiles": [
+          ".env"
+        ],
+        "hasExample": false,
+        "status": "failed",
+        "scoreMode": "available-scored",
+        "scoreImpact": true
+      },
+      "issues": [
+        {
+          "severity": "error",
+          "message": ".env not in .gitignore — secrets may be committed",
+          "file": ".gitignore",
+          "rule": "env-not-ignored",
+          "fingerprint": "3bae9b2806f1469e"
+        },
+        {
+          "severity": "warning",
+          "message": "No .env.example — other developers won't know which vars are needed",
+          "rule": "no-env-example",
+          "fingerprint": "82c0fa931b4a9ec2"
+        }
+      ],
+      "duration": 0,
+      "status": "failed"
+    },
+    {
+      "name": "git-hygiene",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "skipped": true,
+        "reason": "not a git repository",
+        "status": "skipped",
+        "scoreMode": "not-applicable",
+        "scoreImpact": false
+      },
+      "issues": [],
+      "duration": 0,
+      "status": "skipped"
+    },
+    {
+      "name": "memory-safety",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "label": "Resource Lifecycle",
+        "legacyId": "memory-safety",
+        "semantics": "js-ts-resource-lifecycle",
+        "source": "file-inventory",
+        "totalFiles": 58,
+        "affectedFiles": 0,
+        "patterns": 0,
+        "projects": [
+          {
+            "id": "android",
+            "name": "android",
+            "path": "android",
+            "files": 0,
+            "issues": 0
+          },
+          {
+            "id": "backend",
+            "name": "backend",
+            "path": "backend",
+            "files": 58,
+            "issues": 0
+          }
+        ],
+        "status": "passed",
+        "scoreMode": "available-scored",
+        "scoreImpact": true
+      },
+      "issues": [],
+      "duration": 8,
+      "status": "passed"
+    },
+    {
+      "name": "testing",
+      "score": 55,
+      "grade": "D",
+      "details": {
+        "pyramid": {
+          "unit": 3,
+          "integration": 0,
+          "component": 0,
+          "e2e": 1
+        },
+        "layersPresent": "2/3",
+        "e2eTool": "none",
+        "testFiles": 4,
+        "srcFiles": 108,
+        "source": "file-inventory",
+        "pairing": "1%",
+        "quality": {
+          "assertionsPerTest": 3.5,
+          "mockRatio": 0,
+          "snapshotRatio": 0
+        },
+        "executionStatus": "passed",
+        "passed": 1,
+        "failed": 0,
+        "total": 1,
+        "testReports": [
+          {
+            "runner": "vitest",
+            "cwd": "G:\\Datos\\coop_campooste\\backend",
+            "passed": 1,
+            "failed": 0,
+            "total": 1,
+            "durationMs": null,
+            "suites": [
+              {
+                "file": "backend/src/app.controller.spec.ts",
+                "status": "passed",
+                "durationMs": 2504.6,
+                "passed": 1,
+                "failed": 0,
+                "skipped": 0,
+                "total": 1,
+                "tests": [
+                  {
+                    "name": "AppController root should return \"Hello World!\"",
+                    "status": "passed",
+                    "durationMs": 2504.6
+                  }
+                ]
+              }
+            ],
+            "failures": [],
+            "slowest": [
+              {
+                "name": "AppController root should return \"Hello World!\"",
+                "status": "passed",
+                "durationMs": 2504.6,
+                "file": "backend/src/app.controller.spec.ts"
+              }
+            ],
+            "projectId": "backend",
+            "projectPath": "backend",
+            "id": "backend",
+            "path": "backend",
+            "command": "npx vitest run --reporter=json --coverage",
+            "status": "passed",
+            "statusLabel": "passed",
+            "executionOk": true,
+            "reportParsed": true,
+            "coverageStatus": "not-reported",
+            "coverage": null
+          }
+        ],
+        "testProjects": [
+          {
+            "id": "backend",
+            "path": "backend",
+            "runner": "vitest",
+            "command": "npx vitest run --reporter=json --coverage",
+            "status": "passed",
+            "statusLabel": "passed",
+            "reportParsed": true,
+            "executionOk": true,
+            "passed": 1,
+            "failed": 0,
+            "total": 1,
+            "durationMs": null,
+            "coverageStatus": "not-reported",
+            "coverage": null
+          }
+        ],
+        "metrics": [
+          {
+            "id": "srcFiles",
+            "label": "Source files",
+            "value": 108,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "testFiles",
+            "label": "Test files",
+            "value": 4,
+            "unit": "count",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "unitTestFiles",
+            "label": "Unit test files",
+            "value": 3,
+            "unit": "count",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "integrationTestFiles",
+            "label": "Integration test files",
+            "value": 0,
+            "unit": "count",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "componentTestFiles",
+            "label": "Component test files",
+            "value": 0,
+            "unit": "count",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "e2eTestFiles",
+            "label": "E2E test files",
+            "value": 1,
+            "unit": "count",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "pairingPct",
+            "label": "Source files paired with tests",
+            "value": 1,
+            "unit": "percent",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "assertionsPerTest",
+            "label": "Assertions per test",
+            "value": 3.5,
+            "unit": "count",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "mockRatio",
+            "label": "Mock ratio",
+            "value": 0,
+            "trend": "lower-is-better"
+          },
+          {
+            "id": "snapshotRatio",
+            "label": "Snapshot ratio",
+            "value": 0,
+            "trend": "lower-is-better"
+          },
+          {
+            "id": "testsPassed",
+            "label": "Tests passed",
+            "value": 1,
+            "unit": "count",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "testsFailed",
+            "label": "Tests failed",
+            "value": 0,
+            "unit": "count",
+            "trend": "lower-is-better"
+          },
+          {
+            "id": "testsTotal",
+            "label": "Tests total",
+            "value": 1,
+            "unit": "count",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "testPassRate",
+            "label": "Test pass rate",
+            "value": 100,
+            "unit": "percent",
+            "trend": "higher-is-better"
+          }
+        ],
+        "toolRuns": [
+          {
+            "tool": "vitest",
+            "command": "npx vitest run --reporter=json --coverage",
+            "cwd": "G:\\Datos\\coop_campooste\\backend",
+            "analyzerId": "testing",
+            "projectId": "backend",
+            "projectPath": "backend",
+            "analyzer": "testing",
+            "status": "success",
+            "exitCode": 0,
+            "ok": true,
+            "durationMs": 21496,
+            "output": "{\"numTotalTestSuites\":3,\"numPassedTestSuites\":3,\"numFailedTestSuites\":0,\"numPendingTestSuites\":0,\"numTotalTests\":1,\"numPassedTests\":1,\"numFailedTests\":0,\"numPendingTests\":0,\"numTodoTests\":0,\"snapshot\":{\"added\":0,\"failure\":false,\"filesAdded\":0,\"filesRemoved\":0,\"filesRemovedList\":[],\"filesUnmatched\":0,\"filesUpdated\":0,\"matched\":0,\"total\":0,\"unchecked\":0,\"uncheckedKeysByFile\":[],\"unmatched\":0,\"updated\":0,\"didUpdate\":false},\"startTime\":1788296226508,\"success\":true,\"testResults\":[{\"assertionResults\":[{\"ancestorTitles\":[\"AppController\",\"root\"],\"fullName\":\"AppController root should return \\\"Hello World!\\\"\",\"status\":\"passed\",\"title\":\"should return \\\"Hello World!\\\"\",\"duration\":2504.624,\"failureMessages\":[],\"meta\":{},\"tags\":[]}],\"startTime\":1788296231747,\"endTime\":1788296234251.624,\"status\":\"passed\",\"message\":\"\",\"name\":\"G:/Datos/coop_campooste/backend/src/app.controller.spec.ts\"}],\"coverageMap\":{\"G:\\\\Datos\\\\coop_campooste\\\\backend\\\\src\\\\app.controller.ts\":{\"path\":\"G:\\\\Datos\\\\coop_campooste\\\\backend\\\\src\\\\app.controller.ts\",\"statementMap\":{\"0\":{\"start\":{\"line\":5,\"column\":7},\"end\":{\"line\":12,\"column\":null}},\"1\":{\"start\":{\"line\":6,\"column\":31},\"end\":{\"line\":6,\"column\":55}},\"2\":{\"start\":{\"line\":10,\"column\":4},\"end\":{\"line\":10,\"column\":null}},\"3\":{\"start\":{\"line\":4,\"column\":1},\"end\":{\"line\":4,\"column\":null}}},\"fnMap\":{\"0\":{\"name\":\"constructor\",\"decl\":{\"start\":{\"line\":6,\"column\":2},\"end\":{\"line\":6,\"column\":14}},\"loc\":{\"start\":{\"line\":6,\"column\":55},\"end\":{\"line\":6,\"column\":null}},\"line\":6},\"1\":{\"name\":\"getHello\",\"decl\":{\"start\":{\"line\":8,\"column\":2},\"end\":{\"line\":8,\"column\":3}},\"loc\":{\"start\":{\"line\":9,\"column\":21},\"end\":{\"line\":11,\"column\":null}},\"line\":9}},\"branchMap\":{\"0\":{\"loc\":{\"start\":{\"line\":4,\"column\":12},\"end\":{\"line\":4,\"column\":null}},\"type\":\"cond-expr\",\"locations\":[{\"start\":{\"line\":4,\"column\":12},\"end\":{\"line\":4,\"column\":null}},{\"start\":{\"line\":4,\"column\":12},\"end\":{\"line\":4,\"column\":null}}],\"line\":4}},\"s\":{\"0\":1,\"1\":1,\"2\":1,\"3\":1},\"f\":{\"0\":1,\"1\":1},\"b\":{\"0\":[0,1]},\"meta\":{\"lastBranch\":1,\"lastFunction\":2,\"lastStatement\":4,\"seen\":{\"s:5:7:12:Infinity\":0,\"f:6:2:6:14\":0,\"s:6:31:6:55\":1,\"f:8:2:8:3\":1,\"s:10:4:10:Infinity\":2,\"s:4:1:4:Infinity\":3,\"b:4:12:4:Infinity:4:12:4:Infinity\":0},\"fnNames\":{}}},\"G:\\\\Datos\\\\coop_campooste\\\\backend\\\\src\\\\app.service.ts\":{\"path\":\"G:\\\\Datos\\\\coop_campooste\\\\backend\\\\src\\\\app.service.ts\",\"statementMap\":{\"0\":{\"start\":{\"line\":4,\"column\":7},\"end\":{\"line\":8,\"column\":null}},\"1\":{\"start\":{\"line\":6,\"column\":4},\"end\":{\"line\":6,\"column\":null}},\"2\":{\"start\":{\"line\":3,\"column\":1},\"end\":{\"line\":3,\"column\":null}}},\"fnMap\":{\"0\":{\"name\":\"getHello\",\"decl\":{\"start\":{\"line\":5,\"column\":2},\"end\":{\"line\":5,\"column\":21}},\"loc\":{\"start\":{\"line\":5,\"column\":21},\"end\":{\"line\":7,\"column\":null}},\"line\":5}},\"branchMap\":{},\"s\":{\"0\":1,\"1\":1,\"2\":1},\"f\":{\"0\":1},\"b\":{},\"meta\":{\"lastBranch\":0,\"lastFunction\":1,\"lastStatement\":3,\"seen\":{\"s:4:7:8:Infinity\":0,\"f:5:2:5:21\":0,\"s:6:4:6:Infinity\":1,\"s:3:1:3:Infinity\":2},\"fnNames\":{}}}}}\n\u001b[34m % \u001b[39m\u001b[2mCoverage report from \u001b[22m\u001b[33mv8\u001b[39m\n-------------------|---------|----------|---------|---------|-------------------\nFile               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s \n-------------------|---------|----------|---------|---------|-------------------\nAll files          |     100 |       50 |     100 |     100 |                   \n app.controller.ts |     100 |       50 |     100 |     100 | 4                 \n app.service.ts    |     100 |      100 |     100 |     100 |                   \n-------------------|---------|----------|---------|---------|-------------------",
+            "notFound": false
+          }
+        ],
+        "status": "failed",
+        "scoreMode": "available-scored",
+        "scoreImpact": true
+      },
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "No integration tests — consider testing service boundaries",
+          "rule": "no-integration-tests",
+          "fingerprint": "09efd61b3643a236"
+        },
+        {
+          "severity": "warning",
+          "message": "Only 1% of source files have matching test files",
+          "rule": "low-test-pairing",
+          "fingerprint": "a057b819334d3081"
+        },
+        {
+          "severity": "info",
+          "message": "No test file for backend/src/app.module.ts",
+          "file": "backend/src/app.module.ts",
+          "rule": "untested-file",
+          "fingerprint": "2d48e16557bd4d29"
+        },
+        {
+          "severity": "info",
+          "message": "No test file for backend/src/app.service.ts",
+          "file": "backend/src/app.service.ts",
+          "rule": "untested-file",
+          "fingerprint": "e1466b6ef86529e4"
+        },
+        {
+          "severity": "info",
+          "message": "No test file for backend/src/modules/aportes/aportes.controller.ts",
+          "file": "backend/src/modules/aportes/aportes.controller.ts",
+          "rule": "untested-file",
+          "fingerprint": "737e184a8a80fe93"
+        },
+        {
+          "severity": "info",
+          "message": "No test file for backend/src/modules/aportes/aportes.module.ts",
+          "file": "backend/src/modules/aportes/aportes.module.ts",
+          "rule": "untested-file",
+          "fingerprint": "532b017d1fbabea1"
+        },
+        {
+          "severity": "info",
+          "message": "No test file for backend/src/modules/aportes/dto/anular-aporte.dto.ts",
+          "file": "backend/src/modules/aportes/dto/anular-aporte.dto.ts",
+          "rule": "untested-file",
+          "fingerprint": "13381aa80033be8c"
+        },
+        {
+          "severity": "info",
+          "message": "...and 101 more untested files",
+          "rule": "untested-file",
+          "fingerprint": "4e0ab9e263f2bfa8"
+        }
+      ],
+      "duration": 21516,
+      "status": "failed"
+    },
+    {
+      "name": "secrets",
+      "score": 70,
+      "grade": "C",
+      "details": {
+        "secretsFound": 4,
+        "probableLeaks": 1,
+        "placeholderOrFixtureFindings": 3,
+        "tool": "secretlint",
+        "suggestion": "Install gitleaks for deeper secret detection (800+ patterns): brew install gitleaks",
+        "toolRuns": [
+          {
+            "tool": "gitleaks",
+            "command": "gitleaks detect --no-git --report-format json --report-path /dev/stdout 2>/dev/null",
+            "cwd": "G:\\Datos\\coop_campooste",
+            "analyzerId": "secrets",
+            "projectId": "root",
+            "projectPath": ".",
+            "analyzer": "secrets",
+            "status": "failed",
+            "exitCode": 1,
+            "ok": false,
+            "durationMs": 44,
+            "output": "El sistema no puede encontrar la ruta especificada.",
+            "notFound": false
+          }
+        ],
+        "status": "failed",
+        "scoreMode": "available-scored",
+        "scoreImpact": true
+      },
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Possible Credential Placeholder — likely test/docs placeholder; verify it cannot be used as a real credential",
+          "file": "backend/README.md",
+          "line": 5,
+          "rule": "secret-detected",
+          "fingerprint": "ac363313e3aaad7b"
+        },
+        {
+          "severity": "error",
+          "message": ".env exists but is not in .gitignore — secrets may be committed",
+          "file": ".env",
+          "rule": "env-not-ignored",
+          "fingerprint": "7150c7fb1c5b0183"
+        },
+        {
+          "severity": "warning",
+          "message": ".env contains DB_PASSWORD with a credential value — ensure this is not committed",
+          "file": ".env",
+          "rule": "env-secret-value",
+          "fingerprint": "b9f1422fcd7af8ae"
+        },
+        {
+          "severity": "warning",
+          "message": ".env contains JWT_SECRET with a credential value — ensure this is not committed",
+          "file": ".env",
+          "rule": "env-secret-value",
+          "fingerprint": "46051a37cf498fad"
+        }
+      ],
+      "duration": 741,
+      "status": "failed"
+    },
+    {
+      "name": "security",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "filesScanned": 108,
+        "patterns": 2,
+        "cweCategories": 0,
+        "errors": 0,
+        "warnings": 0,
+        "storageAudit": {
+          "localStorageSecrets": 0,
+          "sessionStorageSecrets": 0,
+          "hardcodedCredentials": 0,
+          "insecureCookies": 0,
+          "total": 0
+        },
+        "tool": "built-in",
+        "status": "passed",
+        "scoreMode": "available-scored",
+        "scoreImpact": true
+      },
+      "issues": [
+        {
+          "severity": "info",
+          "message": "No Content-Security-Policy meta tag in HTML",
+          "file": "web/index.html",
+          "rule": "CWE-1021",
+          "fingerprint": "255e68a0471683d7"
+        },
+        {
+          "severity": "info",
+          "message": "External script without subresource integrity (SRI)",
+          "file": "web/index.html",
+          "rule": "CWE-829",
+          "fingerprint": "1c0b1048b27ab08a"
+        }
+      ],
+      "duration": 127,
+      "status": "passed"
+    },
+    {
+      "name": "dependencies",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "vulnerabilities": {
+          "critical": 0,
+          "high": 0,
+          "moderate": 0,
+          "low": 0
+        },
+        "outdated": 0,
+        "majorOutdated": 0,
+        "toolRuns": [
+          {
+            "tool": "dart",
+            "command": "dart pub outdated --json 2>/dev/null || true",
+            "cwd": "G:\\Datos\\coop_campooste",
+            "analyzerId": "dependencies",
+            "projectId": "root",
+            "projectPath": ".",
+            "analyzer": "dependencies",
+            "status": "failed",
+            "exitCode": 1,
+            "ok": false,
+            "durationMs": 27,
+            "output": "El sistema no puede encontrar la ruta especificada.\r\n\"true\" no se reconoce como un comando interno o externo,\r\nprograma o archivo por lotes ejecutable.",
+            "notFound": false
+          }
+        ],
+        "status": "passed",
+        "scoreMode": "available-scored",
+        "scoreImpact": true
+      },
+      "issues": [],
+      "duration": 27,
+      "status": "passed"
+    },
+    {
+      "name": "architecture",
+      "score": 95,
+      "grade": "A",
+      "details": {
+        "totalModules": 108,
+        "circularDeps": 1,
+        "typeOnlyCycles": 1,
+        "dynamicCycles": 1,
+        "godModules": 0,
+        "orphans": 0,
+        "highFanOut": 0,
+        "connectors": 0,
+        "graph": {
+          "backend/src/app.controller.ts": {
+            "imports": [
+              "backend/src/app.service.ts"
+            ],
+            "importedBy": [],
+            "dir": "backend/src"
+          },
+          "backend/src/app.module.ts": {
+            "imports": [
+              "backend/src/modules/socios/socios.module.ts",
+              "backend/src/modules/auth/auth.module.ts"
+            ],
+            "importedBy": [
+              "backend/src/main.ts"
+            ],
+            "dir": "backend/src"
+          },
+          "backend/src/app.service.ts": {
+            "imports": [],
+            "importedBy": [
+              "backend/src/app.controller.ts"
+            ],
+            "dir": "backend/src"
+          },
+          "backend/src/main.ts": {
+            "imports": [
+              "backend/src/app.module.ts"
+            ],
+            "importedBy": [],
+            "dir": "backend/src"
+          },
+          "backend/src/modules/aportes/aportes.controller.ts": {
+            "imports": [
+              "backend/src/modules/aportes/dto/create-aporte.dto.ts",
+              "backend/src/modules/aportes/dto/anular-aporte.dto.ts",
+              "backend/src/modules/auth/jwt-auth.guard.ts",
+              "backend/src/modules/auth/roles.guard.ts",
+              "backend/src/modules/auth/roles.decorator.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/aportes/aportes.module.ts"
+            ],
+            "dir": "backend/src/modules/aportes"
+          },
+          "backend/src/modules/aportes/aportes.module.ts": {
+            "imports": [
+              "backend/src/modules/aportes/entities/aporte.entity.ts",
+              "backend/src/modules/socios/entities/socio.entity.ts",
+              "backend/src/modules/aportes/aportes.controller.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/retiros/retiros.module.ts"
+            ],
+            "dir": "backend/src/modules/aportes"
+          },
+          "backend/src/modules/aportes/dto/anular-aporte.dto.ts": {
+            "imports": [],
+            "importedBy": [
+              "backend/src/modules/aportes/aportes.controller.ts"
+            ],
+            "dir": "backend/src/modules/aportes/dto"
+          },
+          "backend/src/modules/aportes/dto/create-aporte.dto.ts": {
+            "imports": [],
+            "importedBy": [
+              "backend/src/modules/aportes/aportes.controller.ts"
+            ],
+            "dir": "backend/src/modules/aportes/dto"
+          },
+          "backend/src/modules/aportes/entities/aporte.entity.ts": {
+            "imports": [
+              "backend/src/modules/socios/entities/socio.entity.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/aportes/aportes.module.ts",
+              "backend/src/modules/reportes/reportes.module.ts",
+              "backend/src/modules/reportes/reportes.service.ts"
+            ],
+            "dir": "backend/src/modules/aportes/entities"
+          },
+          "backend/src/modules/auth/auth.controller.ts": {
+            "imports": [
+              "backend/src/modules/auth/auth.service.ts",
+              "backend/src/modules/socios/dto/create-socio.dto.ts",
+              "backend/src/modules/socios/dto/login-socio.dto.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/auth/auth.module.ts"
+            ],
+            "dir": "backend/src/modules/auth"
+          },
+          "backend/src/modules/auth/auth.module.ts": {
+            "imports": [
+              "backend/src/modules/auth/auth.service.ts",
+              "backend/src/modules/auth/auth.controller.ts",
+              "backend/src/modules/auth/jwt.strategy.ts",
+              "backend/src/modules/socios/socios.module.ts"
+            ],
+            "importedBy": [
+              "backend/src/app.module.ts",
+              "backend/src/modules/compras/compras.module.ts",
+              "backend/src/modules/productos/productos.module.ts"
+            ],
+            "dir": "backend/src/modules/auth"
+          },
+          "backend/src/modules/auth/auth.service.ts": {
+            "imports": [
+              "backend/src/modules/socios/socios.service.ts",
+              "backend/src/modules/socios/dto/create-socio.dto.ts",
+              "backend/src/modules/socios/dto/login-socio.dto.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/auth/auth.controller.ts",
+              "backend/src/modules/auth/auth.module.ts"
+            ],
+            "dir": "backend/src/modules/auth"
+          },
+          "backend/src/modules/auth/dto/login.dto.ts": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "backend/src/modules/auth/dto"
+          },
+          "backend/src/modules/auth/dto/register.dto.ts": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "backend/src/modules/auth/dto"
+          },
+          "backend/src/modules/auth/jwt-auth.guard.ts": {
+            "imports": [],
+            "importedBy": [
+              "backend/src/modules/aportes/aportes.controller.ts",
+              "backend/src/modules/bitacora/bitacora.controller.ts",
+              "backend/src/modules/compras/compras.controller.ts",
+              "backend/src/modules/prestamos/prestamos.controller.ts",
+              "backend/src/modules/productos/productos.controller.ts",
+              "backend/src/modules/reportes/reportes.controller.ts",
+              "backend/src/modules/retiros/retiros.controller.ts"
+            ],
+            "dir": "backend/src/modules/auth"
+          },
+          "backend/src/modules/auth/jwt.strategy.ts": {
+            "imports": [
+              "backend/src/modules/socios/socios.service.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/auth/auth.module.ts"
+            ],
+            "dir": "backend/src/modules/auth"
+          },
+          "backend/src/modules/auth/roles.decorator.ts": {
+            "imports": [],
+            "importedBy": [
+              "backend/src/modules/aportes/aportes.controller.ts",
+              "backend/src/modules/bitacora/bitacora.controller.ts",
+              "backend/src/modules/prestamos/prestamos.controller.ts",
+              "backend/src/modules/reportes/reportes.controller.ts",
+              "backend/src/modules/retiros/retiros.controller.ts"
+            ],
+            "dir": "backend/src/modules/auth"
+          },
+          "backend/src/modules/auth/roles.guard.ts": {
+            "imports": [],
+            "importedBy": [
+              "backend/src/modules/aportes/aportes.controller.ts",
+              "backend/src/modules/bitacora/bitacora.controller.ts",
+              "backend/src/modules/prestamos/prestamos.controller.ts",
+              "backend/src/modules/reportes/reportes.controller.ts",
+              "backend/src/modules/retiros/retiros.controller.ts"
+            ],
+            "dir": "backend/src/modules/auth"
+          },
+          "backend/src/modules/bitacora/bitacora.controller.ts": {
+            "imports": [
+              "backend/src/modules/bitacora/bitacora.service.ts",
+              "backend/src/modules/auth/jwt-auth.guard.ts",
+              "backend/src/modules/auth/roles.guard.ts",
+              "backend/src/modules/auth/roles.decorator.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/bitacora/bitacora.module.ts"
+            ],
+            "dir": "backend/src/modules/bitacora"
+          },
+          "backend/src/modules/bitacora/bitacora.module.ts": {
+            "imports": [
+              "backend/src/modules/bitacora/entities/bitacora.entity.ts",
+              "backend/src/modules/bitacora/bitacora.service.ts",
+              "backend/src/modules/bitacora/bitacora.controller.ts"
+            ],
+            "importedBy": [],
+            "dir": "backend/src/modules/bitacora"
+          },
+          "backend/src/modules/bitacora/bitacora.service.ts": {
+            "imports": [
+              "backend/src/modules/bitacora/entities/bitacora.entity.ts",
+              "backend/src/modules/bitacora/dto/create-bitacora.dto.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/bitacora/bitacora.controller.ts",
+              "backend/src/modules/bitacora/bitacora.module.ts"
+            ],
+            "dir": "backend/src/modules/bitacora"
+          },
+          "backend/src/modules/bitacora/dto/create-bitacora.dto.ts": {
+            "imports": [],
+            "importedBy": [
+              "backend/src/modules/bitacora/bitacora.service.ts"
+            ],
+            "dir": "backend/src/modules/bitacora/dto"
+          },
+          "backend/src/modules/bitacora/entities/bitacora.entity.ts": {
+            "imports": [],
+            "importedBy": [
+              "backend/src/modules/bitacora/bitacora.module.ts",
+              "backend/src/modules/bitacora/bitacora.service.ts",
+              "backend/src/modules/reportes/reportes.module.ts",
+              "backend/src/modules/reportes/reportes.service.ts"
+            ],
+            "dir": "backend/src/modules/bitacora/entities"
+          },
+          "backend/src/modules/compras/compras.controller.ts": {
+            "imports": [
+              "backend/src/modules/compras/compras.service.ts",
+              "backend/src/modules/auth/jwt-auth.guard.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/compras/compras.module.ts"
+            ],
+            "dir": "backend/src/modules/compras"
+          },
+          "backend/src/modules/compras/compras.module.ts": {
+            "imports": [
+              "backend/src/modules/compras/entities/compra.entity.ts",
+              "backend/src/modules/compras/entities/detalle-compra.entity.ts",
+              "backend/src/modules/compras/compras.service.ts",
+              "backend/src/modules/compras/compras.controller.ts",
+              "backend/src/modules/productos/productos.module.ts",
+              "backend/src/modules/auth/auth.module.ts"
+            ],
+            "importedBy": [],
+            "dir": "backend/src/modules/compras"
+          },
+          "backend/src/modules/compras/compras.service.ts": {
+            "imports": [
+              "backend/src/modules/compras/entities/compra.entity.ts",
+              "backend/src/modules/compras/entities/detalle-compra.entity.ts",
+              "backend/src/modules/productos/productos.service.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/compras/compras.controller.ts",
+              "backend/src/modules/compras/compras.module.ts"
+            ],
+            "dir": "backend/src/modules/compras"
+          },
+          "backend/src/modules/compras/entities/compra.entity.ts": {
+            "imports": [
+              "backend/src/modules/socios/entities/socio.entity.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/compras/compras.module.ts",
+              "backend/src/modules/compras/compras.service.ts",
+              "backend/src/modules/compras/entities/detalle-compra.entity.ts"
+            ],
+            "dir": "backend/src/modules/compras/entities"
+          },
+          "backend/src/modules/compras/entities/detalle-compra.entity.ts": {
+            "imports": [
+              "backend/src/modules/compras/entities/compra.entity.ts",
+              "backend/src/modules/productos/entities/producto.entity.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/compras/compras.module.ts",
+              "backend/src/modules/compras/compras.service.ts"
+            ],
+            "dir": "backend/src/modules/compras/entities"
+          },
+          "backend/src/modules/prestamos/dto/aprobar-prestamo.dto.ts": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "backend/src/modules/prestamos/dto"
+          },
+          "backend/src/modules/prestamos/dto/create-prestamo.dto.ts": {
+            "imports": [],
+            "importedBy": [
+              "backend/src/modules/prestamos/prestamos.controller.ts",
+              "backend/src/modules/prestamos/prestamos.service.ts"
+            ],
+            "dir": "backend/src/modules/prestamos/dto"
+          },
+          "backend/src/modules/prestamos/dto/dto/update-prestamo.dto.ts": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "backend/src/modules/prestamos/dto/dto"
+          },
+          "backend/src/modules/prestamos/entities/cuota.entity.ts": {
+            "imports": [
+              "backend/src/modules/prestamos/entities/prestamo.entity.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/prestamos/entities/prestamo.entity.ts",
+              "backend/src/modules/prestamos/prestamos.module.ts",
+              "backend/src/modules/prestamos/prestamos.service.ts"
+            ],
+            "dir": "backend/src/modules/prestamos/entities"
+          },
+          "backend/src/modules/prestamos/entities/prestamo.entity.ts": {
+            "imports": [
+              "backend/src/modules/socios/entities/socio.entity.ts",
+              "backend/src/modules/prestamos/entities/cuota.entity.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/prestamos/entities/cuota.entity.ts",
+              "backend/src/modules/prestamos/prestamos.module.ts",
+              "backend/src/modules/prestamos/prestamos.service.ts",
+              "backend/src/modules/reportes/reportes.module.ts",
+              "backend/src/modules/reportes/reportes.service.ts"
+            ],
+            "dir": "backend/src/modules/prestamos/entities"
+          },
+          "backend/src/modules/prestamos/prestamos.controller.ts": {
+            "imports": [
+              "backend/src/modules/prestamos/prestamos.service.ts",
+              "backend/src/modules/prestamos/dto/create-prestamo.dto.ts",
+              "backend/src/modules/auth/jwt-auth.guard.ts",
+              "backend/src/modules/auth/roles.guard.ts",
+              "backend/src/modules/auth/roles.decorator.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/prestamos/prestamos.module.ts"
+            ],
+            "dir": "backend/src/modules/prestamos"
+          },
+          "backend/src/modules/prestamos/prestamos.module.ts": {
+            "imports": [
+              "backend/src/modules/prestamos/entities/prestamo.entity.ts",
+              "backend/src/modules/prestamos/entities/cuota.entity.ts",
+              "backend/src/modules/socios/entities/socio.entity.ts",
+              "backend/src/modules/prestamos/prestamos.service.ts",
+              "backend/src/modules/prestamos/prestamos.controller.ts"
+            ],
+            "importedBy": [],
+            "dir": "backend/src/modules/prestamos"
+          },
+          "backend/src/modules/prestamos/prestamos.service.ts": {
+            "imports": [
+              "backend/src/modules/prestamos/entities/prestamo.entity.ts",
+              "backend/src/modules/prestamos/entities/cuota.entity.ts",
+              "backend/src/modules/socios/entities/socio.entity.ts",
+              "backend/src/modules/prestamos/dto/create-prestamo.dto.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/prestamos/prestamos.controller.ts",
+              "backend/src/modules/prestamos/prestamos.module.ts"
+            ],
+            "dir": "backend/src/modules/prestamos"
+          },
+          "backend/src/modules/productos/entities/producto.entity.ts": {
+            "imports": [],
+            "importedBy": [
+              "backend/src/modules/compras/entities/detalle-compra.entity.ts",
+              "backend/src/modules/productos/productos.module.ts",
+              "backend/src/modules/productos/productos.service.ts"
+            ],
+            "dir": "backend/src/modules/productos/entities"
+          },
+          "backend/src/modules/productos/productos.controller.ts": {
+            "imports": [
+              "backend/src/modules/productos/productos.service.ts",
+              "backend/src/modules/auth/jwt-auth.guard.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/productos/productos.module.ts"
+            ],
+            "dir": "backend/src/modules/productos"
+          },
+          "backend/src/modules/productos/productos.module.ts": {
+            "imports": [
+              "backend/src/modules/productos/entities/producto.entity.ts",
+              "backend/src/modules/productos/productos.service.ts",
+              "backend/src/modules/productos/productos.controller.ts",
+              "backend/src/modules/auth/auth.module.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/compras/compras.module.ts"
+            ],
+            "dir": "backend/src/modules/productos"
+          },
+          "backend/src/modules/productos/productos.service.ts": {
+            "imports": [
+              "backend/src/modules/productos/entities/producto.entity.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/compras/compras.service.ts",
+              "backend/src/modules/productos/productos.controller.ts",
+              "backend/src/modules/productos/productos.module.ts"
+            ],
+            "dir": "backend/src/modules/productos"
+          },
+          "backend/src/modules/reportes/reportes.controller.ts": {
+            "imports": [
+              "backend/src/modules/reportes/reportes.service.ts",
+              "backend/src/modules/auth/jwt-auth.guard.ts",
+              "backend/src/modules/auth/roles.guard.ts",
+              "backend/src/modules/auth/roles.decorator.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/reportes/reportes.module.ts"
+            ],
+            "dir": "backend/src/modules/reportes"
+          },
+          "backend/src/modules/reportes/reportes.module.ts": {
+            "imports": [
+              "backend/src/modules/aportes/entities/aporte.entity.ts",
+              "backend/src/modules/socios/entities/socio.entity.ts",
+              "backend/src/modules/prestamos/entities/prestamo.entity.ts",
+              "backend/src/modules/retiros/entities/retiro.entity.ts",
+              "backend/src/modules/bitacora/entities/bitacora.entity.ts",
+              "backend/src/modules/reportes/reportes.service.ts",
+              "backend/src/modules/reportes/reportes.controller.ts"
+            ],
+            "importedBy": [],
+            "dir": "backend/src/modules/reportes"
+          },
+          "backend/src/modules/reportes/reportes.service.ts": {
+            "imports": [
+              "backend/src/modules/aportes/entities/aporte.entity.ts",
+              "backend/src/modules/socios/entities/socio.entity.ts",
+              "backend/src/modules/prestamos/entities/prestamo.entity.ts",
+              "backend/src/modules/retiros/entities/retiro.entity.ts",
+              "backend/src/modules/bitacora/entities/bitacora.entity.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/reportes/reportes.controller.ts",
+              "backend/src/modules/reportes/reportes.module.ts"
+            ],
+            "dir": "backend/src/modules/reportes"
+          },
+          "backend/src/modules/retiros/dto/gestion-retiro.dto.ts": {
+            "imports": [],
+            "importedBy": [
+              "backend/src/modules/retiros/retiros.controller.ts"
+            ],
+            "dir": "backend/src/modules/retiros/dto"
+          },
+          "backend/src/modules/retiros/dto/solicitar-retiro.dto.ts": {
+            "imports": [],
+            "importedBy": [
+              "backend/src/modules/retiros/retiros.controller.ts"
+            ],
+            "dir": "backend/src/modules/retiros/dto"
+          },
+          "backend/src/modules/retiros/entities/retiro.entity.ts": {
+            "imports": [
+              "backend/src/modules/socios/entities/socio.entity.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/reportes/reportes.module.ts",
+              "backend/src/modules/reportes/reportes.service.ts",
+              "backend/src/modules/retiros/retiros.module.ts",
+              "backend/src/modules/retiros/retiros.service.ts"
+            ],
+            "dir": "backend/src/modules/retiros/entities"
+          },
+          "backend/src/modules/retiros/retiros.controller.ts": {
+            "imports": [
+              "backend/src/modules/retiros/retiros.service.ts",
+              "backend/src/modules/retiros/dto/solicitar-retiro.dto.ts",
+              "backend/src/modules/retiros/dto/gestion-retiro.dto.ts",
+              "backend/src/modules/auth/jwt-auth.guard.ts",
+              "backend/src/modules/auth/roles.guard.ts",
+              "backend/src/modules/auth/roles.decorator.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/retiros/retiros.module.ts"
+            ],
+            "dir": "backend/src/modules/retiros"
+          },
+          "backend/src/modules/retiros/retiros.module.ts": {
+            "imports": [
+              "backend/src/modules/retiros/entities/retiro.entity.ts",
+              "backend/src/modules/socios/entities/socio.entity.ts",
+              "backend/src/modules/retiros/retiros.service.ts",
+              "backend/src/modules/retiros/retiros.controller.ts",
+              "backend/src/modules/aportes/aportes.module.ts"
+            ],
+            "importedBy": [],
+            "dir": "backend/src/modules/retiros"
+          },
+          "backend/src/modules/retiros/retiros.service.ts": {
+            "imports": [
+              "backend/src/modules/retiros/entities/retiro.entity.ts",
+              "backend/src/modules/socios/entities/socio.entity.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/retiros/retiros.controller.ts",
+              "backend/src/modules/retiros/retiros.module.ts"
+            ],
+            "dir": "backend/src/modules/retiros"
+          },
+          "backend/src/modules/socios/dto/anular-aporte.dto.ts": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "backend/src/modules/socios/dto"
+          },
+          "backend/src/modules/socios/dto/create-socio.dto.ts": {
+            "imports": [],
+            "importedBy": [
+              "backend/src/modules/auth/auth.controller.ts",
+              "backend/src/modules/auth/auth.service.ts",
+              "backend/src/modules/socios/dto/update-socio.dto.ts",
+              "backend/src/modules/socios/socios.controller.ts",
+              "backend/src/modules/socios/socios.service.ts"
+            ],
+            "dir": "backend/src/modules/socios/dto"
+          },
+          "backend/src/modules/socios/dto/login-socio.dto.ts": {
+            "imports": [],
+            "importedBy": [
+              "backend/src/modules/auth/auth.controller.ts",
+              "backend/src/modules/auth/auth.service.ts"
+            ],
+            "dir": "backend/src/modules/socios/dto"
+          },
+          "backend/src/modules/socios/dto/update-socio.dto.ts": {
+            "imports": [
+              "backend/src/modules/socios/dto/create-socio.dto.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/socios/socios.controller.ts",
+              "backend/src/modules/socios/socios.service.ts"
+            ],
+            "dir": "backend/src/modules/socios/dto"
+          },
+          "backend/src/modules/socios/entities/socio.entity.ts": {
+            "imports": [],
+            "importedBy": [
+              "backend/src/modules/aportes/aportes.module.ts",
+              "backend/src/modules/aportes/entities/aporte.entity.ts",
+              "backend/src/modules/compras/entities/compra.entity.ts",
+              "backend/src/modules/prestamos/entities/prestamo.entity.ts",
+              "backend/src/modules/prestamos/prestamos.module.ts",
+              "backend/src/modules/prestamos/prestamos.service.ts",
+              "backend/src/modules/reportes/reportes.module.ts",
+              "backend/src/modules/reportes/reportes.service.ts",
+              "backend/src/modules/retiros/entities/retiro.entity.ts",
+              "backend/src/modules/retiros/retiros.module.ts",
+              "backend/src/modules/retiros/retiros.service.ts",
+              "backend/src/modules/socios/socios.module.ts",
+              "backend/src/modules/socios/socios.service.ts"
+            ],
+            "dir": "backend/src/modules/socios/entities"
+          },
+          "backend/src/modules/socios/socios.controller.ts": {
+            "imports": [
+              "backend/src/modules/socios/socios.service.ts",
+              "backend/src/modules/socios/dto/create-socio.dto.ts",
+              "backend/src/modules/socios/dto/update-socio.dto.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/socios/socios.module.ts"
+            ],
+            "dir": "backend/src/modules/socios"
+          },
+          "backend/src/modules/socios/socios.module.ts": {
+            "imports": [
+              "backend/src/modules/socios/entities/socio.entity.ts",
+              "backend/src/modules/socios/socios.service.ts",
+              "backend/src/modules/socios/socios.controller.ts"
+            ],
+            "importedBy": [
+              "backend/src/app.module.ts",
+              "backend/src/modules/auth/auth.module.ts"
+            ],
+            "dir": "backend/src/modules/socios"
+          },
+          "backend/src/modules/socios/socios.service.ts": {
+            "imports": [
+              "backend/src/modules/socios/entities/socio.entity.ts",
+              "backend/src/modules/socios/dto/create-socio.dto.ts",
+              "backend/src/modules/socios/dto/update-socio.dto.ts"
+            ],
+            "importedBy": [
+              "backend/src/modules/auth/auth.service.ts",
+              "backend/src/modules/auth/jwt.strategy.ts",
+              "backend/src/modules/socios/socios.controller.ts",
+              "backend/src/modules/socios/socios.module.ts"
+            ],
+            "dir": "backend/src/modules/socios"
+          },
+          "backend/vitest.config.e2e.ts": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "backend"
+          },
+          "lib/main.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib"
+          },
+          "lib/models/account.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/models"
+          },
+          "lib/models/auth_response.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/models"
+          },
+          "lib/models/compra.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/models"
+          },
+          "lib/models/loan.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/models"
+          },
+          "lib/models/movement.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/models"
+          },
+          "lib/models/producto.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/models"
+          },
+          "lib/models/socio.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/models"
+          },
+          "lib/models/user_model.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/models"
+          },
+          "lib/providers/account_provider.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/providers"
+          },
+          "lib/providers/auth_provider.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/providers"
+          },
+          "lib/providers/carrito_provider.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/providers"
+          },
+          "lib/providers/loan_provider.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/providers"
+          },
+          "lib/providers/navigation_provider.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/providers"
+          },
+          "lib/providers/producto_provider.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/providers"
+          },
+          "lib/screens/admin/admin_productos_screen.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/screens/admin"
+          },
+          "lib/screens/admin.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/screens"
+          },
+          "lib/screens/auth/login_screen.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/screens/auth"
+          },
+          "lib/screens/auth/register_screen.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/screens/auth"
+          },
+          "lib/screens/cuentas/accounts_screen.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/screens/cuentas"
+          },
+          "lib/screens/cuentas/account_detail_screen.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/screens/cuentas"
+          },
+          "lib/screens/dashboard/dashboard_screen.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/screens/dashboard"
+          },
+          "lib/screens/dashboard/widgets/balance_card.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/screens/dashboard/widgets"
+          },
+          "lib/screens/dashboard/widgets/quick_actions.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/screens/dashboard/widgets"
+          },
+          "lib/screens/dashboard/widgets/recent_movements.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/screens/dashboard/widgets"
+          },
+          "lib/screens/pagos/payments_screen.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/screens/pagos"
+          },
+          "lib/screens/prestamos/loans_screen.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/screens/prestamos"
+          },
+          "lib/screens/tienda/carrito_screen.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/screens/tienda"
+          },
+          "lib/screens/tienda/checkout_screen.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/screens/tienda"
+          },
+          "lib/screens/tienda/detalle_producto_screen.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/screens/tienda"
+          },
+          "lib/screens/tienda/mis_compras_screen.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/screens/tienda"
+          },
+          "lib/screens/tienda/tienda_screen.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/screens/tienda"
+          },
+          "lib/services/account_service.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/services"
+          },
+          "lib/services/auth_service.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/services"
+          },
+          "lib/services/compra_service.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/services"
+          },
+          "lib/services/loan_service.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/services"
+          },
+          "lib/services/mock_data.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/services"
+          },
+          "lib/services/producto_service.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/services"
+          },
+          "lib/utils/constants.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/utils"
+          },
+          "lib/utils/formatters.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/utils"
+          },
+          "lib/utils/theme.dart": {
+            "imports": [],
+            "importedBy": [],
+            "dir": "lib/utils"
+          },
+          "src/modules/compras/compras.controller.ts": {
+            "imports": [
+              "src/modules/compras/compras.service.ts"
+            ],
+            "importedBy": [
+              "src/modules/compras/compras.module.ts"
+            ],
+            "dir": "src/modules/compras"
+          },
+          "src/modules/compras/compras.module.ts": {
+            "imports": [
+              "src/modules/compras/entities/compra.entity.ts",
+              "src/modules/compras/entities/detalle-compra.entity.ts",
+              "src/modules/compras/compras.service.ts",
+              "src/modules/compras/compras.controller.ts",
+              "src/modules/productos/productos.module.ts"
+            ],
+            "importedBy": [],
+            "dir": "src/modules/compras"
+          },
+          "src/modules/compras/compras.service.ts": {
+            "imports": [
+              "src/modules/compras/entities/compra.entity.ts",
+              "src/modules/compras/entities/detalle-compra.entity.ts",
+              "src/modules/productos/productos.service.ts"
+            ],
+            "importedBy": [
+              "src/modules/compras/compras.controller.ts",
+              "src/modules/compras/compras.module.ts"
+            ],
+            "dir": "src/modules/compras"
+          },
+          "src/modules/compras/entities/compra.entity.ts": {
+            "imports": [],
+            "importedBy": [
+              "src/modules/compras/compras.module.ts",
+              "src/modules/compras/compras.service.ts",
+              "src/modules/compras/entities/detalle-compra.entity.ts"
+            ],
+            "dir": "src/modules/compras/entities"
+          },
+          "src/modules/compras/entities/detalle-compra.entity.ts": {
+            "imports": [
+              "src/modules/compras/entities/compra.entity.ts",
+              "src/modules/productos/entities/producto.entity.ts"
+            ],
+            "importedBy": [
+              "src/modules/compras/compras.module.ts",
+              "src/modules/compras/compras.service.ts"
+            ],
+            "dir": "src/modules/compras/entities"
+          },
+          "src/modules/productos/entities/producto.entity.ts": {
+            "imports": [],
+            "importedBy": [
+              "src/modules/compras/entities/detalle-compra.entity.ts",
+              "src/modules/productos/productos.module.ts",
+              "src/modules/productos/productos.service.ts"
+            ],
+            "dir": "src/modules/productos/entities"
+          },
+          "src/modules/productos/productos.controller.ts": {
+            "imports": [
+              "src/modules/productos/productos.service.ts"
+            ],
+            "importedBy": [
+              "src/modules/productos/productos.module.ts"
+            ],
+            "dir": "src/modules/productos"
+          },
+          "src/modules/productos/productos.module.ts": {
+            "imports": [
+              "src/modules/productos/entities/producto.entity.ts",
+              "src/modules/productos/productos.service.ts",
+              "src/modules/productos/productos.controller.ts"
+            ],
+            "importedBy": [
+              "src/modules/compras/compras.module.ts"
+            ],
+            "dir": "src/modules/productos"
+          },
+          "src/modules/productos/productos.service.ts": {
+            "imports": [
+              "src/modules/productos/entities/producto.entity.ts"
+            ],
+            "importedBy": [
+              "src/modules/compras/compras.service.ts",
+              "src/modules/productos/productos.controller.ts",
+              "src/modules/productos/productos.module.ts"
+            ],
+            "dir": "src/modules/productos"
+          }
+        },
+        "containerSvg": "",
+        "assessment": {
+          "pattern": "layered",
+          "patternDescription": "Layered architecture — clear separation between input, processing, and output.",
+          "layering": "mixed",
+          "stability": [
+            {
+              "package": "backend/src",
+              "instability": 0.67,
+              "role": "balanced"
+            },
+            {
+              "package": "backend/src/modules/aportes",
+              "instability": 0.8,
+              "role": "unstable (easy to change)"
+            },
+            {
+              "package": "backend/src/modules/aportes/dto",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "backend/src/modules/aportes/entities",
+              "instability": 0.25,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "backend/src/modules/auth",
+              "instability": 0.31,
+              "role": "balanced"
+            },
+            {
+              "package": "backend/src/modules/auth/dto",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "backend/src/modules/bitacora",
+              "instability": 0.75,
+              "role": "unstable (easy to change)"
+            },
+            {
+              "package": "backend/src/modules/bitacora/dto",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "backend/src/modules/bitacora/entities",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "backend/src/modules/compras",
+              "instability": 0.79,
+              "role": "unstable (easy to change)"
+            },
+            {
+              "package": "backend/src/modules/compras/entities",
+              "instability": 0.38,
+              "role": "balanced"
+            },
+            {
+              "package": "backend/src/modules/prestamos/dto",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "backend/src/modules/prestamos/dto/dto",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "backend/src/modules/prestamos/entities",
+              "instability": 0.27,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "backend/src/modules/prestamos",
+              "instability": 0.82,
+              "role": "unstable (easy to change)"
+            },
+            {
+              "package": "backend/src/modules/productos/entities",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "backend/src/modules/productos",
+              "instability": 0.58,
+              "role": "balanced"
+            },
+            {
+              "package": "backend/src/modules/reportes",
+              "instability": 0.84,
+              "role": "unstable (easy to change)"
+            },
+            {
+              "package": "backend/src/modules/retiros/dto",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "backend/src/modules/retiros/entities",
+              "instability": 0.2,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "backend/src/modules/retiros",
+              "instability": 0.81,
+              "role": "unstable (easy to change)"
+            },
+            {
+              "package": "backend/src/modules/socios/dto",
+              "instability": 0.1,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "backend/src/modules/socios/entities",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "backend/src/modules/socios",
+              "instability": 0.56,
+              "role": "balanced"
+            },
+            {
+              "package": "backend",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "lib",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "lib/models",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "lib/providers",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "lib/screens/admin",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "lib/screens",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "lib/screens/auth",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "lib/screens/cuentas",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "lib/screens/dashboard",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "lib/screens/dashboard/widgets",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "lib/screens/pagos",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "lib/screens/prestamos",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "lib/screens/tienda",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "lib/services",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "lib/utils",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "src/modules/compras",
+              "instability": 0.75,
+              "role": "unstable (easy to change)"
+            },
+            {
+              "package": "src/modules/compras/entities",
+              "instability": 0.29,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "src/modules/productos/entities",
+              "instability": 0,
+              "role": "stable (hard to change)"
+            },
+            {
+              "package": "src/modules/productos",
+              "instability": 0.5,
+              "role": "balanced"
+            }
+          ],
+          "crossCoupling": 10,
+          "cohesion": 40,
+          "rating": "fair",
+          "insights": [
+            "Low cross-coupling (10%) — packages are well-isolated.",
+            "Stable foundation detected — core modules rarely change.",
+            "No god modules — healthy dependency distribution."
+          ]
+        },
+        "tool": "built-in",
+        "source": "file-inventory",
+        "typeOnlyEdgesIgnored": 0,
+        "dynamicEdgesIgnored": 0,
+        "status": "failed",
+        "scoreMode": "available-scored",
+        "scoreImpact": true
+      },
+      "issues": [
+        {
+          "severity": "error",
+          "message": "Static runtime circular dependency: cuota.entity → prestamo.entity → cuota.entity",
+          "file": "backend/src/modules/prestamos/entities/cuota.entity.ts",
+          "rule": "circular-dep",
+          "fingerprint": "4600ad092ce54041"
+        },
+        {
+          "severity": "info",
+          "message": "Type-only dependency cycle ignored for runtime scoring: cuota.entity → prestamo.entity → cuota.entity",
+          "file": "backend/src/modules/prestamos/entities/cuota.entity.ts",
+          "rule": "type-only-cycle",
+          "fingerprint": "3c2fb97833d8e23b"
+        },
+        {
+          "severity": "info",
+          "message": "Deferred dynamic import cycle ignored for runtime scoring: cuota.entity → prestamo.entity → cuota.entity",
+          "file": "backend/src/modules/prestamos/entities/cuota.entity.ts",
+          "rule": "dynamic-import-cycle",
+          "fingerprint": "78ac3870ddd60dde"
+        }
+      ],
+      "duration": 941,
+      "status": "failed"
+    },
+    {
+      "name": "performance",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "filesScanned": 108,
+        "source": "file-inventory",
+        "barrelImports": 0,
+        "heavyDeps": 0,
+        "dynamicOpportunities": 0,
+        "cssInJsRuntime": 0,
+        "bundleSizeKB": 99428,
+        "toolRuns": [
+          {
+            "tool": "knip",
+            "command": "npx knip --reporter json 2>/dev/null || true",
+            "cwd": "G:\\Datos\\coop_campooste",
+            "analyzerId": "performance",
+            "projectId": "root",
+            "projectPath": ".",
+            "analyzer": "performance",
+            "status": "failed",
+            "exitCode": 1,
+            "ok": false,
+            "durationMs": 24,
+            "output": "El sistema no puede encontrar la ruta especificada.\r\n\"true\" no se reconoce como un comando interno o externo,\r\nprograma o archivo por lotes ejecutable.",
+            "notFound": false
+          }
+        ],
+        "status": "passed",
+        "scoreMode": "available-scored",
+        "scoreImpact": true
+      },
+      "issues": [],
+      "duration": 39,
+      "status": "passed"
+    },
+    {
+      "name": "dead-code",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "synthetic": true,
+        "skipped": true,
+        "reason": "Knip did not produce a parseable dead-code report",
+        "status": "skipped",
+        "scoreMode": "not-applicable",
+        "scoreImpact": false
+      },
+      "issues": [],
+      "duration": 0,
+      "status": "skipped"
+    },
+    {
+      "name": "container-health",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "skipped": true,
+        "reason": "no Dockerfile found",
+        "status": "skipped",
+        "scoreMode": "not-applicable",
+        "scoreImpact": false
+      },
+      "issues": [],
+      "duration": 0,
+      "status": "skipped"
+    },
+    {
+      "name": "cloudflare-workers",
+      "status": "skipped",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "skipped": true,
+        "status": "skipped",
+        "scoreMode": "not-applicable",
+        "scoreImpact": false,
+        "reason": "not applicable to this stack (requires component: cloudflare-workers)"
+      },
+      "issues": [],
+      "duration": 0
+    },
+    {
+      "name": "cloudflare-worker-mcp",
+      "status": "skipped",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "skipped": true,
+        "status": "skipped",
+        "scoreMode": "not-applicable",
+        "scoreImpact": false,
+        "reason": "not applicable to this stack (requires component: cloudflare-workers + mcp-server)"
+      },
+      "issues": [],
+      "duration": 0
+    },
+    {
+      "name": "sqlite-d1",
+      "status": "skipped",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "skipped": true,
+        "status": "skipped",
+        "scoreMode": "not-applicable",
+        "scoreImpact": false,
+        "reason": "not applicable to this stack (requires component: sqlite-d1)"
+      },
+      "issues": [],
+      "duration": 0
+    },
+    {
+      "name": "confusion",
+      "score": 35,
+      "grade": "F",
+      "details": {
+        "fileConfusability": 11,
+        "genericNames": 0,
+        "exportCollisions": 10,
+        "ambiguousAbbrevs": 8,
+        "filesScanned": 108,
+        "source": "file-inventory",
+        "status": "failed",
+        "scoreMode": "available-scored",
+        "scoreImpact": true
+      },
+      "issues": [
+        {
+          "severity": "warning",
+          "message": "Synonym filenames: app.controller ↔ app.service (service/controller are interchangeable — pick one convention)",
+          "file": "backend/src/app.controller.ts",
+          "rule": "synonym-filename",
+          "fingerprint": "d5d36aa9ae03c3ac"
+        },
+        {
+          "severity": "warning",
+          "message": "Synonym filenames: auth.controller ↔ auth.service (service/controller are interchangeable — pick one convention)",
+          "file": "backend/src/modules/auth/auth.controller.ts",
+          "rule": "synonym-filename",
+          "fingerprint": "1d2a4e210e650779"
+        },
+        {
+          "severity": "warning",
+          "message": "Synonym filenames: bitacora.controller ↔ bitacora.service (service/controller are interchangeable — pick one convention)",
+          "file": "backend/src/modules/bitacora/bitacora.controller.ts",
+          "rule": "synonym-filename",
+          "fingerprint": "b2499b72632bc023"
+        },
+        {
+          "severity": "warning",
+          "message": "Synonym filenames: compras.controller ↔ compras.service (service/controller are interchangeable — pick one convention)",
+          "file": "backend/src/modules/compras/compras.controller.ts",
+          "rule": "synonym-filename",
+          "fingerprint": "24b9c52986c5cb59"
+        },
+        {
+          "severity": "warning",
+          "message": "Synonym filenames: prestamos.controller ↔ prestamos.service (service/controller are interchangeable — pick one convention)",
+          "file": "backend/src/modules/prestamos/prestamos.controller.ts",
+          "rule": "synonym-filename",
+          "fingerprint": "207ff805f5337ca5"
+        },
+        {
+          "severity": "warning",
+          "message": "Synonym filenames: productos.controller ↔ productos.service (service/controller are interchangeable — pick one convention)",
+          "file": "backend/src/modules/productos/productos.controller.ts",
+          "rule": "synonym-filename",
+          "fingerprint": "8e4d3276395a34c8"
+        },
+        {
+          "severity": "warning",
+          "message": "Synonym filenames: reportes.controller ↔ reportes.service (service/controller are interchangeable — pick one convention)",
+          "file": "backend/src/modules/reportes/reportes.controller.ts",
+          "rule": "synonym-filename",
+          "fingerprint": "79b7f54a30a7c5c1"
+        },
+        {
+          "severity": "warning",
+          "message": "Synonym filenames: retiros.controller ↔ retiros.service (service/controller are interchangeable — pick one convention)",
+          "file": "backend/src/modules/retiros/retiros.controller.ts",
+          "rule": "synonym-filename",
+          "fingerprint": "c01d0c9502993d63"
+        },
+        {
+          "severity": "warning",
+          "message": "Synonym filenames: socios.controller ↔ socios.service (service/controller are interchangeable — pick one convention)",
+          "file": "backend/src/modules/socios/socios.controller.ts",
+          "rule": "synonym-filename",
+          "fingerprint": "b4aac8f4b4314b0f"
+        },
+        {
+          "severity": "warning",
+          "message": "Synonym filenames: compras.controller ↔ compras.service (service/controller are interchangeable — pick one convention)",
+          "file": "src/modules/compras/compras.controller.ts",
+          "rule": "synonym-filename",
+          "fingerprint": "bb95c6f9f4a51628"
+        },
+        {
+          "severity": "warning",
+          "message": "Synonym filenames: productos.controller ↔ productos.service (service/controller are interchangeable — pick one convention)",
+          "file": "src/modules/productos/productos.controller.ts",
+          "rule": "synonym-filename",
+          "fingerprint": "a82a3286713e47d7"
+        },
+        {
+          "severity": "warning",
+          "message": "Export collision: \"AnularAporteDto\" exported from 2 files — LLMs may reference the wrong one",
+          "file": "backend/src/modules/aportes/dto/anular-aporte.dto.ts, backend/src/modules/socios/dto/anular-aporte.dto.ts",
+          "rule": "export-collision",
+          "fingerprint": "7c2fc7b674152bb5"
+        },
+        {
+          "severity": "warning",
+          "message": "Export collision: \"ComprasController\" exported from 2 files — LLMs may reference the wrong one",
+          "file": "backend/src/modules/compras/compras.controller.ts, src/modules/compras/compras.controller.ts",
+          "rule": "export-collision",
+          "fingerprint": "f2ce9a627bffcda2"
+        },
+        {
+          "severity": "warning",
+          "message": "Export collision: \"ComprasModule\" exported from 2 files — LLMs may reference the wrong one",
+          "file": "backend/src/modules/compras/compras.module.ts, src/modules/compras/compras.module.ts",
+          "rule": "export-collision",
+          "fingerprint": "252ee33d04907160"
+        },
+        {
+          "severity": "warning",
+          "message": "Export collision: \"ComprasService\" exported from 2 files — LLMs may reference the wrong one",
+          "file": "backend/src/modules/compras/compras.service.ts, src/modules/compras/compras.service.ts",
+          "rule": "export-collision",
+          "fingerprint": "691e2ec8b3eca93b"
+        },
+        {
+          "severity": "warning",
+          "message": "Export collision: \"Compra\" exported from 2 files — LLMs may reference the wrong one",
+          "file": "backend/src/modules/compras/entities/compra.entity.ts, src/modules/compras/entities/compra.entity.ts",
+          "rule": "export-collision",
+          "fingerprint": "78a535cf88c4fc6d"
+        },
+        {
+          "severity": "warning",
+          "message": "Export collision: \"DetalleCompra\" exported from 2 files — LLMs may reference the wrong one",
+          "file": "backend/src/modules/compras/entities/detalle-compra.entity.ts, src/modules/compras/entities/detalle-compra.entity.ts",
+          "rule": "export-collision",
+          "fingerprint": "09e8a47bf27b9654"
+        },
+        {
+          "severity": "warning",
+          "message": "Export collision: \"Producto\" exported from 2 files — LLMs may reference the wrong one",
+          "file": "backend/src/modules/productos/entities/producto.entity.ts, src/modules/productos/entities/producto.entity.ts",
+          "rule": "export-collision",
+          "fingerprint": "00ad54a2e9f2b61e"
+        },
+        {
+          "severity": "warning",
+          "message": "Export collision: \"ProductosController\" exported from 2 files — LLMs may reference the wrong one",
+          "file": "backend/src/modules/productos/productos.controller.ts, src/modules/productos/productos.controller.ts",
+          "rule": "export-collision",
+          "fingerprint": "cc58db366aa81d1a"
+        },
+        {
+          "severity": "warning",
+          "message": "Export collision: \"ProductosModule\" exported from 2 files — LLMs may reference the wrong one",
+          "file": "backend/src/modules/productos/productos.module.ts, src/modules/productos/productos.module.ts",
+          "rule": "export-collision",
+          "fingerprint": "ab9d7390390f5043"
+        },
+        {
+          "severity": "warning",
+          "message": "Export collision: \"ProductosService\" exported from 2 files — LLMs may reference the wrong one",
+          "file": "backend/src/modules/productos/productos.service.ts, src/modules/productos/productos.service.ts",
+          "rule": "export-collision",
+          "fingerprint": "e2133ed1b15d26ae"
+        },
+        {
+          "severity": "warning",
+          "message": "Ambiguous abbreviation \"auth\" in filename — could mean: authentication OR authorization",
+          "file": "backend/src/modules/auth/auth.controller.ts",
+          "rule": "ambiguous-abbreviation",
+          "fingerprint": "3844cc45129eaa23"
+        },
+        {
+          "severity": "warning",
+          "message": "Ambiguous abbreviation \"auth\" in filename — could mean: authentication OR authorization",
+          "file": "backend/src/modules/auth/auth.module.ts",
+          "rule": "ambiguous-abbreviation",
+          "fingerprint": "510062fda2d19755"
+        },
+        {
+          "severity": "warning",
+          "message": "Ambiguous abbreviation \"auth\" in filename — could mean: authentication OR authorization",
+          "file": "backend/src/modules/auth/auth.service.ts",
+          "rule": "ambiguous-abbreviation",
+          "fingerprint": "68f1097746668429"
+        },
+        {
+          "severity": "warning",
+          "message": "Ambiguous abbreviation \"auth\" in filename — could mean: authentication OR authorization",
+          "file": "backend/src/modules/auth/jwt-auth.guard.ts",
+          "rule": "ambiguous-abbreviation",
+          "fingerprint": "568cf12538681d83"
+        },
+        {
+          "severity": "warning",
+          "message": "Ambiguous abbreviation \"config\" in filename — could mean: which configuration?",
+          "file": "backend/vitest.config.e2e.ts",
+          "rule": "ambiguous-abbreviation",
+          "fingerprint": "e25389e9caea3e8d"
+        },
+        {
+          "severity": "warning",
+          "message": "Ambiguous abbreviation \"auth\" in filename — could mean: authentication OR authorization",
+          "file": "lib/models/auth_response.dart",
+          "rule": "ambiguous-abbreviation",
+          "fingerprint": "b67738d43791b2e0"
+        },
+        {
+          "severity": "warning",
+          "message": "Ambiguous abbreviation \"auth\" in filename — could mean: authentication OR authorization",
+          "file": "lib/providers/auth_provider.dart",
+          "rule": "ambiguous-abbreviation",
+          "fingerprint": "6fbb23adb9e0abfe"
+        },
+        {
+          "severity": "warning",
+          "message": "Ambiguous abbreviation \"auth\" in filename — could mean: authentication OR authorization",
+          "file": "lib/services/auth_service.dart",
+          "rule": "ambiguous-abbreviation",
+          "fingerprint": "b2b66177e79a8807"
+        }
+      ],
+      "duration": 17,
+      "status": "failed"
+    },
+    {
+      "name": "context",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "filesScanned": 108,
+        "source": "file-inventory",
+        "totalTokens": 49750,
+        "avgTokensPerFile": 461,
+        "avgImportsPerFile": 1.3,
+        "highTokenFiles": 0,
+        "heavyImportFiles": 0,
+        "circularDeps": 1,
+        "contextSinks": 0,
+        "status": "passed",
+        "scoreMode": "available-scored",
+        "scoreImpact": true
+      },
+      "issues": [],
+      "duration": 20,
+      "status": "passed"
+    },
+    {
+      "name": "doc-coherence",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "premium": true,
+        "comingSoon": true,
+        "reason": "Set VCQA_PRO_KEY to enable LLM-powered analysis",
+        "docFiles": [
+          "README.md"
+        ],
+        "hasJSDoc": false,
+        "source": "file-inventory",
+        "description": "Detects contradictions between documentation and code. Finds stale README claims, incorrect JSDoc, and misleading comments.",
+        "status": "unavailable",
+        "scoreMode": "unavailable",
+        "scoreImpact": false
+      },
+      "issues": [],
+      "duration": 7,
+      "status": "unavailable"
+    },
+    {
+      "name": "code-coherence",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "premium": true,
+        "comingSoon": true,
+        "reason": "Set VCQA_PRO_KEY to enable LLM-powered analysis",
+        "filesAnalyzed": 108,
+        "source": "file-inventory",
+        "totalExports": 67,
+        "totalFunctions": 1,
+        "description": "Detects internal contradictions: inconsistent validation, conflicting defaults, naming drift, and behavioral mismatches.",
+        "status": "unavailable",
+        "scoreMode": "unavailable",
+        "scoreImpact": false
+      },
+      "issues": [],
+      "duration": 8,
+      "status": "unavailable"
+    },
+    {
+      "name": "comment-staleness",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "premium": true,
+        "comingSoon": true,
+        "reason": "Set VCQA_PRO_KEY to enable comment staleness analysis",
+        "description": "Detects stale comments: TODOs older than 6 months, numeric mismatches, commented-out code, semantic contradictions (LLM-powered).",
+        "status": "unavailable",
+        "scoreMode": "unavailable",
+        "scoreImpact": false
+      },
+      "issues": [],
+      "duration": 5,
+      "status": "unavailable"
+    },
+    {
+      "name": "html-quality",
+      "score": 80,
+      "grade": "B",
+      "details": {
+        "htmlFiles": 1,
+        "source": "file-inventory",
+        "staticSites": [
+          {
+            "rootPath": "web",
+            "publicRoots": [],
+            "outputRoots": [],
+            "evidence": [
+              {
+                "source": "html-index",
+                "file": "web/index.html",
+                "description": "Index HTML file marks a static site root"
+              },
+              {
+                "source": "convention",
+                "value": "web",
+                "description": "Common static site directory contains static web markers"
+              }
+            ]
+          }
+        ],
+        "status": "passed",
+        "scoreMode": "available-unscored",
+        "scoreImpact": false,
+        "advisoryFindings": true
+      },
+      "issues": [
+        {
+          "severity": "error",
+          "message": "Missing viewport meta — page won't be mobile-responsive; add <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+          "file": "web/index.html",
+          "rule": "missing-viewport",
+          "fingerprint": "034b900486f68a26"
+        },
+        {
+          "severity": "info",
+          "message": "Missing Open Graph tags (og:title, og:description) — social sharing will look plain",
+          "file": "web/index.html",
+          "rule": "missing-og",
+          "fingerprint": "68f76f9fcbb551b9"
+        },
+        {
+          "severity": "info",
+          "message": "Missing canonical link — may cause duplicate content issues",
+          "file": "web/index.html",
+          "rule": "missing-canonical",
+          "fingerprint": "25533298738d8fde"
+        },
+        {
+          "severity": "warning",
+          "message": "Missing lang attribute on <html> — screen readers need this (WCAG 3.1.1); add e.g. <html lang=\"en\">",
+          "file": "web/index.html",
+          "rule": "missing-lang",
+          "fingerprint": "c963a8e4b8bc6d4f"
+        },
+        {
+          "severity": "info",
+          "message": "Missing robots.txt for static site root web",
+          "rule": "missing-robots",
+          "fingerprint": "770125014a6e56f7"
+        },
+        {
+          "severity": "info",
+          "message": "Missing sitemap.xml for static site root web",
+          "rule": "missing-sitemap",
+          "fingerprint": "0d81eb18b1d27bd6"
+        }
+      ],
+      "duration": 4,
+      "status": "passed"
+    },
+    {
+      "name": "frontend-health",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "skipped": true,
+        "reason": "no component files found",
+        "projects": [],
+        "status": "skipped",
+        "scoreMode": "not-applicable",
+        "scoreImpact": false
+      },
+      "issues": [],
+      "duration": 9,
+      "status": "skipped"
+    },
+    {
+      "name": "styling",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "skipped": true,
+        "reason": "no component files found",
+        "projects": [],
+        "status": "skipped",
+        "scoreMode": "not-applicable",
+        "scoreImpact": false
+      },
+      "issues": [],
+      "duration": 8,
+      "status": "skipped"
+    },
+    {
+      "name": "dead-patterns",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "premium": true,
+        "comingSoon": true,
+        "reason": "Set VCQA_PRO_KEY to enable dead pattern detection",
+        "description": "Detects leftover code from incomplete refactors: fallback paths, parallel implementations, dead guards, hardcoded feature flags. Produces a Feature Map of your codebase.",
+        "status": "unavailable",
+        "scoreMode": "unavailable",
+        "scoreImpact": false
+      },
+      "issues": [],
+      "duration": 0,
+      "status": "unavailable"
+    },
+    {
+      "name": "test-audit",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "premium": true,
+        "comingSoon": true,
+        "reason": "Set VCQA_PRO_KEY to enable test audit",
+        "description": "Detects fake and shallow tests: empty test bodies, trivial assertions, tautologies, mock-heavy tests, and tests whose names don't match what they actually verify.",
+        "status": "unavailable",
+        "scoreMode": "unavailable",
+        "scoreImpact": false
+      },
+      "issues": [],
+      "duration": 0,
+      "status": "unavailable"
+    },
+    {
+      "name": "file-cohesion",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "premium": true,
+        "comingSoon": true,
+        "reason": "Set VCQA_PRO_KEY to enable file cohesion analysis",
+        "description": "Detects files with multiple responsibilities — the #1 code smell in AI-generated code. Labels each file's concern clusters and suggests concrete split points.",
+        "status": "unavailable",
+        "scoreMode": "unavailable",
+        "scoreImpact": false
+      },
+      "issues": [],
+      "duration": 0,
+      "status": "unavailable"
+    },
+    {
+      "name": "design-consistency",
+      "score": 100,
+      "grade": "A",
+      "details": {
+        "premium": true,
+        "comingSoon": true,
+        "reason": "Set VCQA_PRO_KEY to enable design consistency analysis",
+        "description": "LLM-powered audit of visual consistency — finds components with duplicate styling, inconsistent spacing scales, and missing component extraction opportunities.",
+        "status": "unavailable",
+        "scoreMode": "unavailable",
+        "scoreImpact": false
+      },
+      "issues": [],
+      "duration": 0,
+      "status": "unavailable"
+    }
+  ],
+  "meta": {
+    "cwd": "G:\\Datos\\coop_campooste",
+    "node": "v26.8.1",
+    "duration": 25576,
+    "filesScanned": 111,
+    "stack": {
+      "language": "dart",
+      "framework": "flutter",
+      "bundler": "none",
+      "testRunner": "flutter_test",
+      "linter": "dart_analyze",
+      "packageManager": "pub"
+    },
+    "workspace": {
+      "isMonorepo": true,
+      "tool": "none",
+      "packages": [
+        {
+          "name": "android",
+          "path": "android",
+          "hasSrc": true,
+          "hasRootCode": false,
+          "hasTests": true,
+          "hasLinter": false
+        },
+        {
+          "name": "backend",
+          "path": "backend",
+          "hasSrc": true,
+          "hasRootCode": false,
+          "hasTests": true,
+          "hasLinter": false
+        }
+      ],
+      "srcRoots": [
+        "android\\app",
+        "backend\\src",
+        "backend\\test",
+        "src",
+        "lib"
+      ],
+      "projects": [
+        {
+          "id": "root",
+          "name": "root",
+          "path": ".",
+          "kind": "root",
+          "stack": {
+            "language": "dart",
+            "framework": "flutter",
+            "bundler": "none",
+            "testRunner": "flutter_test",
+            "linter": "dart_analyze",
+            "packageManager": "pub",
+            "components": []
+          },
+          "srcRoots": [
+            "src",
+            "lib"
+          ],
+          "testRoots": [
+            "test"
+          ],
+          "configFiles": [
+            "analysis_options.yaml",
+            "BUILD"
+          ],
+          "manifestFiles": [
+            "package.json",
+            "pubspec.yaml"
+          ],
+          "evidence": [
+            {
+              "kind": "source",
+              "path": ".",
+              "description": "Repository root scanned as a project"
+            },
+            {
+              "kind": "manifest",
+              "file": "package.json",
+              "description": "Project manifest found"
+            },
+            {
+              "kind": "manifest",
+              "file": "pubspec.yaml",
+              "description": "Project manifest found"
+            },
+            {
+              "kind": "config",
+              "file": "analysis_options.yaml",
+              "description": "Project config found"
+            },
+            {
+              "kind": "config",
+              "file": "BUILD",
+              "description": "Project config found"
+            }
+          ],
+          "confidence": 1,
+          "support": {
+            "status": "supported"
+          },
+          "toolCommands": {
+            "lint": [
+              {
+                "tool": "dart",
+                "cwd": ".",
+                "command": [
+                  "dart",
+                  "analyze"
+                ]
+              }
+            ],
+            "typecheck": [
+              {
+                "tool": "dart",
+                "cwd": ".",
+                "command": [
+                  "dart",
+                  "analyze"
+                ]
+              }
+            ],
+            "test": [
+              {
+                "tool": "flutter",
+                "cwd": ".",
+                "command": [
+                  "flutter",
+                  "test"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "android",
+          "name": "android",
+          "path": "android",
+          "kind": "package",
+          "stack": {
+            "language": "java",
+            "framework": "unknown",
+            "bundler": "none",
+            "testRunner": "gradle_test",
+            "linter": "unknown",
+            "packageManager": "gradle",
+            "components": [
+              "java-gradle",
+              "unsupported-ecosystem"
+            ]
+          },
+          "srcRoots": [
+            "android\\app"
+          ],
+          "testRoots": [],
+          "configFiles": [
+            "android\\settings.gradle.kts",
+            "android\\build.gradle.kts"
+          ],
+          "manifestFiles": [],
+          "evidence": [
+            {
+              "kind": "convention",
+              "path": "android, backend",
+              "description": "Multiple child manifests detected without a workspace manifest"
+            },
+            {
+              "kind": "source",
+              "path": "android",
+              "description": "Workspace package selected as a scan project"
+            },
+            {
+              "kind": "config",
+              "file": "android\\settings.gradle.kts",
+              "description": "Project config found"
+            },
+            {
+              "kind": "config",
+              "file": "android\\build.gradle.kts",
+              "description": "Project config found"
+            }
+          ],
+          "confidence": 0.55,
+          "support": {
+            "status": "unsupported",
+            "reason": "Project was discovered from deterministic manifests, but VCQA analyzers for this ecosystem are not available yet."
+          },
+          "toolCommands": {}
+        },
+        {
+          "id": "backend",
+          "name": "backend",
+          "path": "backend",
+          "kind": "service",
+          "stack": {
+            "language": "typescript",
+            "framework": "none",
+            "bundler": "none",
+            "testRunner": "vitest",
+            "linter": "none",
+            "packageManager": "npm"
+          },
+          "srcRoots": [
+            "backend\\src"
+          ],
+          "testRoots": [
+            "backend\\test"
+          ],
+          "configFiles": [
+            "backend\\tsconfig.json",
+            "backend\\vitest.config.ts"
+          ],
+          "manifestFiles": [
+            "backend\\package.json"
+          ],
+          "evidence": [
+            {
+              "kind": "convention",
+              "path": "android, backend",
+              "description": "Multiple child manifests detected without a workspace manifest"
+            },
+            {
+              "kind": "source",
+              "path": "backend",
+              "description": "Workspace package selected as a scan project"
+            },
+            {
+              "kind": "manifest",
+              "file": "backend\\package.json",
+              "description": "Project manifest found"
+            },
+            {
+              "kind": "config",
+              "file": "backend\\tsconfig.json",
+              "description": "Project config found"
+            },
+            {
+              "kind": "config",
+              "file": "backend\\vitest.config.ts",
+              "description": "Project config found"
+            }
+          ],
+          "confidence": 0.95,
+          "support": {
+            "status": "supported"
+          },
+          "toolCommands": {
+            "test": [
+              {
+                "tool": "vitest",
+                "cwd": "backend",
+                "command": [
+                  "npx",
+                  "vitest",
+                  "run"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "discovery": {
+        "mode": "convention",
+        "evidence": [
+          {
+            "kind": "convention",
+            "path": "android, backend",
+            "description": "Multiple child manifests detected without a workspace manifest"
+          },
+          {
+            "kind": "rejected",
+            "path": "ios/Flutter",
+            "description": "Nested convention candidate rejected because no supported project manifest was found"
+          },
+          {
+            "kind": "rejected",
+            "path": "ios/Runner",
+            "description": "Nested convention candidate rejected because no supported project manifest was found"
+          },
+          {
+            "kind": "rejected",
+            "path": "ios/Runner.xcodeproj",
+            "description": "Nested convention candidate rejected because no supported project manifest was found"
+          },
+          {
+            "kind": "rejected",
+            "path": "ios/Runner.xcworkspace",
+            "description": "Nested convention candidate rejected because no supported project manifest was found"
+          },
+          {
+            "kind": "rejected",
+            "path": "ios/RunnerTests",
+            "description": "Nested convention candidate rejected because no supported project manifest was found"
+          },
+          {
+            "kind": "rejected",
+            "path": "web/icons",
+            "description": "Nested convention candidate rejected because no supported project manifest was found"
+          }
+        ]
+      }
+    },
+    "scanPolicy": {
+      "version": 1,
+      "precedence": [
+        "security-sensitive override",
+        ".vcqa/package vcqa ignore",
+        "user ignore names",
+        "VCQA_IGNORE names",
+        "default exclusions and generated classification",
+        ".gitignore directory rules",
+        "per-check finding filters"
+      ],
+      "securitySensitiveOverride": {
+        "enabled": true,
+        "appliesToReasonCodes": [
+          "config-ignore",
+          "env-ignore",
+          "gitignore-directory",
+          "user-ignore"
+        ],
+        "blockedByGeneratedOrDefaultArtifact": true
+      },
+      "reasonCodes": [
+        "agent-artifact",
+        "build-output",
+        "config-ignore",
+        "dependency",
+        "env-ignore",
+        "framework-cache",
+        "generated-file",
+        "gitignore-directory",
+        "hidden-directory",
+        "lockfile",
+        "runtime-cache",
+        "security-sensitive",
+        "test-output",
+        "user-ignore",
+        "vcqa",
+        "vcs"
+      ],
+      "defaultDirectoryNames": 57,
+      "defaultDirectoryNameValues": [
+        "node_modules",
+        "bower_components",
+        "jspm_packages",
+        ".git",
+        ".hg",
+        ".svn",
+        ".vibe-check",
+        "dist",
+        "build",
+        "out",
+        "coverage",
+        "test-results",
+        "playwright-report",
+        "reports",
+        "htmlcov",
+        ".nyc_output",
+        "__pycache__",
+        ".pytest_cache",
+        ".mypy_cache",
+        ".ruff_cache",
+        ".tox",
+        ".nox",
+        ".hypothesis",
+        ".venv",
+        "venv",
+        ".pnpm-store",
+        ".dart_tool",
+        ".flutter-plugins",
+        ".gradle",
+        ".angular",
+        ".expo",
+        ".next",
+        ".nuxt",
+        ".output",
+        ".svelte-kit",
+        ".astro",
+        ".vite",
+        ".wrangler",
+        ".vercel",
+        ".netlify",
+        ".serverless",
+        ".firebase",
+        ".parcel-cache",
+        ".turbo",
+        ".nx",
+        ".cache",
+        ".provision",
+        "target",
+        "obj",
+        ".build",
+        "DerivedData",
+        "Pods",
+        ".claude",
+        ".gstack",
+        ".playwright-mcp",
+        "vendor",
+        "third_party"
+      ],
+      "defaultFilePatterns": 37,
+      "defaultFilePatternValues": [
+        "screenshot-*.html",
+        "*.snap.html",
+        "*.snapshot.html",
+        "*.bundle.js",
+        "*.bundle.css",
+        "*.chunk.js",
+        "*.chunk.css",
+        "*.min.js",
+        "*.min.css",
+        "*.generated.ts",
+        "*.generated.tsx",
+        "*.generated.js",
+        "*.generated.jsx",
+        "*.gen.ts",
+        "*.gen.js",
+        "*.g.dart",
+        "*.pb.go",
+        "*.designer.cs",
+        "*.map",
+        "*.tsbuildinfo",
+        "coverage-final.json",
+        "lcov.info",
+        "junit.xml",
+        "test-results.xml",
+        ".coverage",
+        ".yarn/build-state.yml",
+        ".yarn/install-state.gz",
+        "pnpm-lock.yaml",
+        "package-lock.json",
+        "yarn.lock",
+        "bun.lock",
+        "bun.lockb",
+        "pubspec.lock",
+        "Podfile.lock",
+        "Cargo.lock",
+        "Gemfile.lock",
+        "composer.lock"
+      ],
+      "generatedPathPrefixes": 3,
+      "generatedPathPrefixValues": [
+        ".claude/worktrees",
+        ".yarn/cache",
+        ".yarn/unplugged"
+      ],
+      "configIgnorePatterns": 0,
+      "configIgnorePatternValues": [],
+      "userIgnoreNames": 0,
+      "userIgnoreNameValues": [],
+      "envIgnoreNames": 0,
+      "envIgnoreNameValues": [],
+      "gitignoreDirectoryNames": 14,
+      "gitignoreDirectoryNameValues": [
+        ".atom",
+        ".build",
+        ".buildlog",
+        ".svn",
+        ".swiftpm",
+        "migrate_working_dir",
+        ".idea",
+        "**/doc/api",
+        ".dart_tool",
+        ".pub-cache",
+        ".pub",
+        "build",
+        "coverage",
+        ".widget_preview"
+      ],
+      "ignoreHiddenDirectories": false
+    },
+    "fileInventory": {
+      "totalFiles": 280,
+      "includedFiles": 276,
+      "ignoredFiles": 4,
+      "ignoredDirectories": 9,
+      "generatedFiles": 0,
+      "securitySensitiveFiles": 2,
+      "staticSiteRoots": 1,
+      "byKind": {
+        "env": 2,
+        "unknown": 114,
+        "config": 9,
+        "asset": 36,
+        "doc": 3,
+        "test": 3,
+        "source": 108,
+        "html": 1
+      },
+      "ignoredByReason": {
+        "framework-cache": 2,
+        "gitignore-directory": 4,
+        "vcs": 1,
+        "build-output": 3,
+        "dependency": 2,
+        "lockfile": 3
+      }
+    },
+    "analyzerSnapshots": [
+      {
+        "analyzerId": "structure",
+        "status": "failed",
+        "score": 80,
+        "findingCount": 2,
+        "severityCounts": {
+          "error": 1,
+          "warning": 1,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "srcFiles",
+            "label": "Src Files",
+            "value": 108,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "testFiles",
+            "label": "Test Files",
+            "value": 3,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "source",
+            "label": "Source",
+            "value": "file-inventory",
+            "trend": "neutral"
+          },
+          {
+            "id": "testRatio",
+            "label": "Test Ratio",
+            "value": "3%",
+            "trend": "neutral"
+          },
+          {
+            "id": "monorepo",
+            "label": "Monorepo",
+            "value": true,
+            "trend": "neutral"
+          },
+          {
+            "id": "workspaceTool",
+            "label": "Workspace Tool",
+            "value": "none",
+            "trend": "neutral"
+          },
+          {
+            "id": "packages",
+            "label": "Packages",
+            "value": 2,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "available-scored",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": true,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 11
+      },
+      {
+        "analyzerId": "lint",
+        "status": "passed",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "errors",
+            "label": "Errors",
+            "value": 0,
+            "unit": "count",
+            "trend": "lower-is-better"
+          },
+          {
+            "id": "warnings",
+            "label": "Warnings",
+            "value": 0,
+            "unit": "count",
+            "trend": "lower-is-better"
+          },
+          {
+            "id": "linter",
+            "label": "Linter",
+            "value": "dart_analyze",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "available-scored",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": true,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 1042
+      },
+      {
+        "analyzerId": "types",
+        "status": "passed",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "errors",
+            "label": "Errors",
+            "value": 0,
+            "unit": "count",
+            "trend": "lower-is-better"
+          },
+          {
+            "id": "ok",
+            "label": "Ok",
+            "value": true,
+            "trend": "neutral"
+          },
+          {
+            "id": "excludedRootFallback",
+            "label": "Excluded Root Fallback",
+            "value": false,
+            "trend": "neutral"
+          },
+          {
+            "id": "strategy",
+            "label": "Strategy",
+            "value": "dart-project-targets",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "available-scored",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": true,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 15
+      },
+      {
+        "analyzerId": "type-safety",
+        "status": "passed",
+        "score": 95,
+        "findingCount": 3,
+        "severityCounts": {
+          "error": 0,
+          "warning": 3,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": ": any",
+            "label": ": Any",
+            "value": 3,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "source",
+            "label": "Source",
+            "value": "file-inventory",
+            "trend": "neutral"
+          },
+          {
+            "id": "filesScanned",
+            "label": "Files Scanned",
+            "value": 58,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "totalUnsafe",
+            "label": "Total Unsafe",
+            "value": 3,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "available-scored",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": true,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 17
+      },
+      {
+        "analyzerId": "standards",
+        "status": "passed",
+        "score": 74,
+        "findingCount": 35,
+        "severityCounts": {
+          "error": 0,
+          "warning": 35,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "filesScanned",
+            "label": "Files Scanned",
+            "value": 108,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "codeSmells",
+            "label": "Code Smells",
+            "value": 35,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "largeFiles",
+            "label": "Large Files",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "namingViolations",
+            "label": "Naming Violations",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "source",
+            "label": "Source",
+            "value": "file-inventory",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "available-scored",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": true,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 37
+      },
+      {
+        "analyzerId": "complexity",
+        "status": "passed",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "totalFiles",
+            "label": "Total Files",
+            "value": 108,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "totalLines",
+            "label": "Total Lines",
+            "value": 5474,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "longFunctions",
+            "label": "Long Functions",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "complexFunctions",
+            "label": "Complex Functions",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "functionCount",
+            "label": "Function Count",
+            "value": 123,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "source",
+            "label": "Source",
+            "value": "file-inventory",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "available-scored",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": true,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 14
+      },
+      {
+        "analyzerId": "duplication",
+        "status": "passed",
+        "score": 90,
+        "findingCount": 17,
+        "severityCounts": {
+          "error": 0,
+          "warning": 17,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "filesScanned",
+            "label": "Files Scanned",
+            "value": 108,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "totalSourceLines",
+            "label": "Total Source Lines",
+            "value": 5474,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "duplicateBlocks",
+            "label": "Duplicate Blocks",
+            "value": 17,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "duplicationPct",
+            "label": "Duplication Pct",
+            "value": "8.6%",
+            "trend": "neutral"
+          },
+          {
+            "id": "tool",
+            "label": "Tool",
+            "value": "built-in",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "available-scored",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": true,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 564
+      },
+      {
+        "analyzerId": "error-handling",
+        "status": "passed",
+        "score": 100,
+        "findingCount": 1,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 1
+        },
+        "metrics": [
+          {
+            "id": "emptyCatch",
+            "label": "Empty Catch",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "throwString",
+            "label": "Throw String",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "floatingPromises",
+            "label": "Floating Promises",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "jsonParseUnsafe",
+            "label": "Json Parse Unsafe",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "infiniteLoops",
+            "label": "Infinite Loops",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "source",
+            "label": "Source",
+            "value": "file-inventory",
+            "trend": "neutral"
+          },
+          {
+            "id": "tool",
+            "label": "Tool",
+            "value": "built-in",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "available-scored",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": true,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 15
+      },
+      {
+        "analyzerId": "react",
+        "status": "skipped",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "not-applicable",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": false,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 0
+      },
+      {
+        "analyzerId": "flutter",
+        "status": "passed",
+        "score": 98,
+        "findingCount": 1,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 1
+        },
+        "metrics": [
+          {
+            "id": "packages",
+            "label": "Flutter packages",
+            "value": 1,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "apps",
+            "label": "Flutter apps",
+            "value": 1,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "sourceFiles",
+            "label": "Dart source files",
+            "value": 41,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "widgetTests",
+            "label": "Widget tests",
+            "value": 1,
+            "unit": "count",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "integrationTests",
+            "label": "Integration tests",
+            "value": 0,
+            "unit": "count",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "generatedFiles",
+            "label": "Generated Dart files",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          }
+        ],
+        "durationMs": 5
+      },
+      {
+        "analyzerId": "accessibility",
+        "status": "skipped",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "not-applicable",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": false,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 0
+      },
+      {
+        "analyzerId": "docs",
+        "status": "failed",
+        "score": 30,
+        "findingCount": 2,
+        "severityCounts": {
+          "error": 0,
+          "warning": 1,
+          "info": 1
+        },
+        "metrics": [
+          {
+            "id": "readmeLines",
+            "label": "Readme Lines",
+            "value": 18,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "totalExports",
+            "label": "Total Exports",
+            "value": 64,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "documentedExports",
+            "label": "Documented Exports",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "documentedPct",
+            "label": "Documented Pct",
+            "value": "0%",
+            "trend": "neutral"
+          },
+          {
+            "id": "hasChangelog",
+            "label": "Has Changelog",
+            "value": false,
+            "trend": "neutral"
+          },
+          {
+            "id": "source",
+            "label": "Source",
+            "value": "file-inventory",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "available-scored",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": true,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 12
+      },
+      {
+        "analyzerId": "best-practices",
+        "status": "passed",
+        "score": 70,
+        "findingCount": 12,
+        "severityCounts": {
+          "error": 0,
+          "warning": 1,
+          "info": 11
+        },
+        "metrics": [
+          {
+            "id": "practicesChecked",
+            "label": "Practices Checked",
+            "value": 17,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "practicesFollowed",
+            "label": "Practices Followed",
+            "value": 5,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "adherence",
+            "label": "Adherence",
+            "value": "29%",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "available-scored",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": true,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 5
+      },
+      {
+        "analyzerId": "env-validation",
+        "status": "failed",
+        "score": 65,
+        "findingCount": 2,
+        "severityCounts": {
+          "error": 1,
+          "warning": 1,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "hasExample",
+            "label": "Has Example",
+            "value": false,
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "available-scored",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": true,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 0
+      },
+      {
+        "analyzerId": "git-hygiene",
+        "status": "skipped",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "not-applicable",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": false,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 0
+      },
+      {
+        "analyzerId": "memory-safety",
+        "status": "passed",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "label",
+            "label": "Label",
+            "value": "Resource Lifecycle",
+            "trend": "neutral"
+          },
+          {
+            "id": "legacyId",
+            "label": "Legacy Id",
+            "value": "memory-safety",
+            "trend": "neutral"
+          },
+          {
+            "id": "semantics",
+            "label": "Semantics",
+            "value": "js-ts-resource-lifecycle",
+            "trend": "neutral"
+          },
+          {
+            "id": "source",
+            "label": "Source",
+            "value": "file-inventory",
+            "trend": "neutral"
+          },
+          {
+            "id": "totalFiles",
+            "label": "Total Files",
+            "value": 58,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "affectedFiles",
+            "label": "Affected Files",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "patterns",
+            "label": "Patterns",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "available-scored",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": true,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 8
+      },
+      {
+        "analyzerId": "testing",
+        "status": "failed",
+        "score": 55,
+        "findingCount": 8,
+        "severityCounts": {
+          "error": 0,
+          "warning": 2,
+          "info": 6
+        },
+        "metrics": [
+          {
+            "id": "srcFiles",
+            "label": "Source files",
+            "value": 108,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "testFiles",
+            "label": "Test files",
+            "value": 4,
+            "unit": "count",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "unitTestFiles",
+            "label": "Unit test files",
+            "value": 3,
+            "unit": "count",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "integrationTestFiles",
+            "label": "Integration test files",
+            "value": 0,
+            "unit": "count",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "componentTestFiles",
+            "label": "Component test files",
+            "value": 0,
+            "unit": "count",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "e2eTestFiles",
+            "label": "E2E test files",
+            "value": 1,
+            "unit": "count",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "pairingPct",
+            "label": "Source files paired with tests",
+            "value": 1,
+            "unit": "percent",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "assertionsPerTest",
+            "label": "Assertions per test",
+            "value": 3.5,
+            "unit": "count",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "mockRatio",
+            "label": "Mock ratio",
+            "value": 0,
+            "trend": "lower-is-better"
+          },
+          {
+            "id": "snapshotRatio",
+            "label": "Snapshot ratio",
+            "value": 0,
+            "trend": "lower-is-better"
+          },
+          {
+            "id": "testsPassed",
+            "label": "Tests passed",
+            "value": 1,
+            "unit": "count",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "testsFailed",
+            "label": "Tests failed",
+            "value": 0,
+            "unit": "count",
+            "trend": "lower-is-better"
+          },
+          {
+            "id": "testsTotal",
+            "label": "Tests total",
+            "value": 1,
+            "unit": "count",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "testPassRate",
+            "label": "Test pass rate",
+            "value": 100,
+            "unit": "percent",
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 21516
+      },
+      {
+        "analyzerId": "secrets",
+        "status": "failed",
+        "score": 70,
+        "findingCount": 4,
+        "severityCounts": {
+          "error": 1,
+          "warning": 3,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "secretsFound",
+            "label": "Secrets Found",
+            "value": 4,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "probableLeaks",
+            "label": "Probable Leaks",
+            "value": 1,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "placeholderOrFixtureFindings",
+            "label": "Placeholder Or Fixture Findings",
+            "value": 3,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "tool",
+            "label": "Tool",
+            "value": "secretlint",
+            "trend": "neutral"
+          },
+          {
+            "id": "suggestion",
+            "label": "Suggestion",
+            "value": "Install gitleaks for deeper secret detection (800+ patterns): brew install gitleaks",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "available-scored",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": true,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 741
+      },
+      {
+        "analyzerId": "security",
+        "status": "passed",
+        "score": 100,
+        "findingCount": 2,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 2
+        },
+        "metrics": [
+          {
+            "id": "filesScanned",
+            "label": "Files Scanned",
+            "value": 108,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "patterns",
+            "label": "Patterns",
+            "value": 2,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "cweCategories",
+            "label": "Cwe Categories",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "errors",
+            "label": "Errors",
+            "value": 0,
+            "unit": "count",
+            "trend": "lower-is-better"
+          },
+          {
+            "id": "warnings",
+            "label": "Warnings",
+            "value": 0,
+            "unit": "count",
+            "trend": "lower-is-better"
+          },
+          {
+            "id": "tool",
+            "label": "Tool",
+            "value": "built-in",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "available-scored",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": true,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 127
+      },
+      {
+        "analyzerId": "dependencies",
+        "status": "passed",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "outdated",
+            "label": "Outdated",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "majorOutdated",
+            "label": "Major Outdated",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "available-scored",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": true,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 27
+      },
+      {
+        "analyzerId": "architecture",
+        "status": "failed",
+        "score": 95,
+        "findingCount": 3,
+        "severityCounts": {
+          "error": 1,
+          "warning": 0,
+          "info": 2
+        },
+        "metrics": [
+          {
+            "id": "totalModules",
+            "label": "Total Modules",
+            "value": 108,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "circularDeps",
+            "label": "Circular Deps",
+            "value": 1,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "typeOnlyCycles",
+            "label": "Type Only Cycles",
+            "value": 1,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "dynamicCycles",
+            "label": "Dynamic Cycles",
+            "value": 1,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "godModules",
+            "label": "God Modules",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "orphans",
+            "label": "Orphans",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "highFanOut",
+            "label": "High Fan Out",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "connectors",
+            "label": "Connectors",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "tool",
+            "label": "Tool",
+            "value": "built-in",
+            "trend": "neutral"
+          },
+          {
+            "id": "source",
+            "label": "Source",
+            "value": "file-inventory",
+            "trend": "neutral"
+          },
+          {
+            "id": "typeOnlyEdgesIgnored",
+            "label": "Type Only Edges Ignored",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "dynamicEdgesIgnored",
+            "label": "Dynamic Edges Ignored",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          }
+        ],
+        "durationMs": 941
+      },
+      {
+        "analyzerId": "performance",
+        "status": "passed",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "filesScanned",
+            "label": "Files Scanned",
+            "value": 108,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "source",
+            "label": "Source",
+            "value": "file-inventory",
+            "trend": "neutral"
+          },
+          {
+            "id": "barrelImports",
+            "label": "Barrel Imports",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "heavyDeps",
+            "label": "Heavy Deps",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "dynamicOpportunities",
+            "label": "Dynamic Opportunities",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "cssInJsRuntime",
+            "label": "Css In Js Runtime",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "bundleSizeKB",
+            "label": "Bundle Size KB",
+            "value": 99428,
+            "unit": "bytes",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "available-scored",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": true,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 39
+      },
+      {
+        "analyzerId": "dead-code",
+        "status": "skipped",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "synthetic",
+            "label": "Synthetic",
+            "value": true,
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "not-applicable",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": false,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 0
+      },
+      {
+        "analyzerId": "container-health",
+        "status": "skipped",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "not-applicable",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": false,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 0
+      },
+      {
+        "analyzerId": "cloudflare-workers",
+        "status": "skipped",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "not-applicable",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": false,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 0
+      },
+      {
+        "analyzerId": "cloudflare-worker-mcp",
+        "status": "skipped",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "not-applicable",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": false,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 0
+      },
+      {
+        "analyzerId": "sqlite-d1",
+        "status": "skipped",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "not-applicable",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": false,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 0
+      },
+      {
+        "analyzerId": "confusion",
+        "status": "failed",
+        "score": 35,
+        "findingCount": 29,
+        "severityCounts": {
+          "error": 0,
+          "warning": 29,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "fileConfusability",
+            "label": "File Confusability",
+            "value": 11,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "genericNames",
+            "label": "Generic Names",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "exportCollisions",
+            "label": "Export Collisions",
+            "value": 10,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "ambiguousAbbrevs",
+            "label": "Ambiguous Abbrevs",
+            "value": 8,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "filesScanned",
+            "label": "Files Scanned",
+            "value": 108,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "source",
+            "label": "Source",
+            "value": "file-inventory",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "available-scored",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": true,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 17
+      },
+      {
+        "analyzerId": "context",
+        "status": "passed",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "filesScanned",
+            "label": "Files Scanned",
+            "value": 108,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "source",
+            "label": "Source",
+            "value": "file-inventory",
+            "trend": "neutral"
+          },
+          {
+            "id": "totalTokens",
+            "label": "Total Tokens",
+            "value": 49750,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "avgTokensPerFile",
+            "label": "Avg Tokens Per File",
+            "value": 461,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "avgImportsPerFile",
+            "label": "Avg Imports Per File",
+            "value": 1.3,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "highTokenFiles",
+            "label": "High Token Files",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "heavyImportFiles",
+            "label": "Heavy Import Files",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "circularDeps",
+            "label": "Circular Deps",
+            "value": 1,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "contextSinks",
+            "label": "Context Sinks",
+            "value": 0,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "available-scored",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": true,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 20
+      },
+      {
+        "analyzerId": "doc-coherence",
+        "status": "unavailable",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "premium",
+            "label": "Premium",
+            "value": true,
+            "trend": "neutral"
+          },
+          {
+            "id": "comingSoon",
+            "label": "Coming Soon",
+            "value": true,
+            "trend": "neutral"
+          },
+          {
+            "id": "hasJSDoc",
+            "label": "Has JSDoc",
+            "value": false,
+            "trend": "neutral"
+          },
+          {
+            "id": "source",
+            "label": "Source",
+            "value": "file-inventory",
+            "trend": "neutral"
+          },
+          {
+            "id": "description",
+            "label": "Description",
+            "value": "Detects contradictions between documentation and code. Finds stale README claims, incorrect JSDoc, and misleading comments.",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "unavailable",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": false,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 7
+      },
+      {
+        "analyzerId": "code-coherence",
+        "status": "unavailable",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "premium",
+            "label": "Premium",
+            "value": true,
+            "trend": "neutral"
+          },
+          {
+            "id": "comingSoon",
+            "label": "Coming Soon",
+            "value": true,
+            "trend": "neutral"
+          },
+          {
+            "id": "filesAnalyzed",
+            "label": "Files Analyzed",
+            "value": 108,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "source",
+            "label": "Source",
+            "value": "file-inventory",
+            "trend": "neutral"
+          },
+          {
+            "id": "totalExports",
+            "label": "Total Exports",
+            "value": 67,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "totalFunctions",
+            "label": "Total Functions",
+            "value": 1,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "description",
+            "label": "Description",
+            "value": "Detects internal contradictions: inconsistent validation, conflicting defaults, naming drift, and behavioral mismatches.",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "unavailable",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": false,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 8
+      },
+      {
+        "analyzerId": "comment-staleness",
+        "status": "unavailable",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "premium",
+            "label": "Premium",
+            "value": true,
+            "trend": "neutral"
+          },
+          {
+            "id": "comingSoon",
+            "label": "Coming Soon",
+            "value": true,
+            "trend": "neutral"
+          },
+          {
+            "id": "description",
+            "label": "Description",
+            "value": "Detects stale comments: TODOs older than 6 months, numeric mismatches, commented-out code, semantic contradictions (LLM-powered).",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "unavailable",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": false,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 5
+      },
+      {
+        "analyzerId": "html-quality",
+        "status": "passed",
+        "score": 80,
+        "findingCount": 6,
+        "severityCounts": {
+          "error": 1,
+          "warning": 1,
+          "info": 4
+        },
+        "metrics": [
+          {
+            "id": "htmlFiles",
+            "label": "Html Files",
+            "value": 1,
+            "unit": "count",
+            "trend": "neutral"
+          },
+          {
+            "id": "source",
+            "label": "Source",
+            "value": "file-inventory",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "available-unscored",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": false,
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "advisoryFindings",
+            "label": "Advisory Findings",
+            "value": true,
+            "trend": "neutral"
+          }
+        ],
+        "durationMs": 4
+      },
+      {
+        "analyzerId": "frontend-health",
+        "status": "skipped",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "not-applicable",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": false,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 9
+      },
+      {
+        "analyzerId": "styling",
+        "status": "skipped",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "not-applicable",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": false,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 8
+      },
+      {
+        "analyzerId": "dead-patterns",
+        "status": "unavailable",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "premium",
+            "label": "Premium",
+            "value": true,
+            "trend": "neutral"
+          },
+          {
+            "id": "comingSoon",
+            "label": "Coming Soon",
+            "value": true,
+            "trend": "neutral"
+          },
+          {
+            "id": "description",
+            "label": "Description",
+            "value": "Detects leftover code from incomplete refactors: fallback paths, parallel implementations, dead guards, hardcoded feature flags. Produces a Feature Map of your codebase.",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "unavailable",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": false,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 0
+      },
+      {
+        "analyzerId": "test-audit",
+        "status": "unavailable",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "premium",
+            "label": "Premium",
+            "value": true,
+            "trend": "neutral"
+          },
+          {
+            "id": "comingSoon",
+            "label": "Coming Soon",
+            "value": true,
+            "trend": "neutral"
+          },
+          {
+            "id": "description",
+            "label": "Description",
+            "value": "Detects fake and shallow tests: empty test bodies, trivial assertions, tautologies, mock-heavy tests, and tests whose names don't match what they actually verify.",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "unavailable",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": false,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 0
+      },
+      {
+        "analyzerId": "file-cohesion",
+        "status": "unavailable",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "premium",
+            "label": "Premium",
+            "value": true,
+            "trend": "neutral"
+          },
+          {
+            "id": "comingSoon",
+            "label": "Coming Soon",
+            "value": true,
+            "trend": "neutral"
+          },
+          {
+            "id": "description",
+            "label": "Description",
+            "value": "Detects files with multiple responsibilities — the #1 code smell in AI-generated code. Labels each file's concern clusters and suggests concrete split points.",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "unavailable",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": false,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 0
+      },
+      {
+        "analyzerId": "design-consistency",
+        "status": "unavailable",
+        "score": 100,
+        "findingCount": 0,
+        "severityCounts": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "metrics": [
+          {
+            "id": "premium",
+            "label": "Premium",
+            "value": true,
+            "trend": "neutral"
+          },
+          {
+            "id": "comingSoon",
+            "label": "Coming Soon",
+            "value": true,
+            "trend": "neutral"
+          },
+          {
+            "id": "description",
+            "label": "Description",
+            "value": "LLM-powered audit of visual consistency — finds components with duplicate styling, inconsistent spacing scales, and missing component extraction opportunities.",
+            "trend": "neutral"
+          },
+          {
+            "id": "scoreMode",
+            "label": "Score Mode",
+            "value": "unavailable",
+            "trend": "higher-is-better"
+          },
+          {
+            "id": "scoreImpact",
+            "label": "Score Impact",
+            "value": false,
+            "trend": "higher-is-better"
+          }
+        ],
+        "durationMs": 0
+      }
+    ],
+    "repoUrl": null,
+    "branch": "main"
+  }
+}

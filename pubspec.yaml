@@ -1,0 +1,45 @@
+name: coop_campooste
+description: Aplicacion para la Cooperativa Coop_Campooste
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ======================== GESTION DE ESTADO ========================
+  provider: ^6.1.5
+
+  # ======================== RED Y API ===============================
+  http: ^1.6.0
+
+  # ======================== ALMACENAMIENTO LOCAL ====================
+  shared_preferences: ^2.5.5
+  flutter_secure_storage: ^11.0.0
+
+  # ======================== IMPRESION Y TICKET (PDF / BLUETOOTH) ====
+  pdf: ^3.13.0
+  printing: ^5.15.0
+  flutter_blue_plus: ^2.3.12
+  esc_pos_utils_plus: ^2.0.4
+
+  # ======================== UTILIDADES ==============================
+  permission_handler: ^11.3.1
+  mask_text_input_formatter: ^2.9.0
+  intl: ^0.20.3
+
+  # ======================== UI =====================================
+  google_fonts: ^8.2.1
+  flutter_svg: ^2.3.0
+  shimmer: ^4.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
