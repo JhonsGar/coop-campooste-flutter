@@ -1,41 +1,26 @@
-import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart' show kIsWeb;
 
 class AppConstants {
   static const String appName = 'Coop_Campooste';
   static const String appVersion = '1.0.0';
 
-  // IP de la PC donde corre el backend (para Android fisico)
-  static const String _pcIp = '192.168.1.3';
-  static const int _backendPort = 3001;
-
-  // Detecta la plataforma automaticamente
+  // ============================================================
+  // URL DINÁMICA DEL BACKEND
+  // ============================================================
+  // - Si la app corre en localhost → usa backend LOCAL
+  // - Si la app corre en Render/Vercel/etc → usa backend RENDER
+  // ============================================================
   static String get apiBaseUrl {
     if (kIsWeb) {
-      return 'http://localhost:$_backendPort';
+      final host = Uri.base.host;
+      // Si estamos en localhost o 127.0.0.1
+      if (host == 'localhost' || host == '127.0.0.1') {
+        return 'http://localhost:3001';
+      }
     }
-    try {
-      if (Platform.isAndroid) {
-        return 'http://$_pcIp:$_backendPort';
-      }
-      if (Platform.isWindows) {
-        return 'http://localhost:$_backendPort';
-      }
-      if (Platform.isMacOS) {
-        return 'http://localhost:$_backendPort';
-      }
-      if (Platform.isLinux) {
-        return 'http://localhost:$_backendPort';
-      }
-      if (Platform.isIOS) {
-        return 'http://$_pcIp:$_backendPort';
-      }
-    } catch (_) {}
-    return 'http://localhost:$_backendPort';
+    // En producción (Render, Vercel, etc.)
+    return 'https://coop-campooste-backend.onrender.com';
   }
-
-  // Alias para compatibilidad
-  static String get baseUrl => apiBaseUrl;
 
   static const String keyToken = 'token';
   static const String keyUser = 'user';

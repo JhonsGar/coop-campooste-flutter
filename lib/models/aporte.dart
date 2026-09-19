@@ -1,35 +1,34 @@
 class Aporte {
   final int id;
   final int socioId;
-  final DateTime fecha;
   final double monto;
-  final String tipo; // 'ordinario', 'extraordinario'
-  final String? referencia;
+  final String tipo;
+  final String? descripcion;
+  final String? concepto;
+  final String fecha;
+  final String estado;
 
   Aporte({
     required this.id,
     required this.socioId,
-    required this.fecha,
     required this.monto,
     required this.tipo,
-    this.referencia,
+    this.descripcion,
+    this.concepto,
+    required this.fecha,
+    required this.estado,
   });
 
-  Map<String, dynamic> toJson() => {
-    'id': id,
-    'socioId': socioId,
-    'fecha': fecha.toIso8601String(),
-    'monto': monto,
-    'tipo': tipo,
-    'referencia': referencia,
-  };
-
-  factory Aporte.fromJson(Map<String, dynamic> json) => Aporte(
-    id: json['id'],
-    socioId: json['socioId'],
-    fecha: DateTime.parse(json['fecha']),
-    monto: (json['monto'] as num).toDouble(),
-    tipo: json['tipo'],
-    referencia: json['referencia'],
-  );
+  factory Aporte.fromJson(Map<String, dynamic> json) {
+    return Aporte(
+      id: json['id'] as int,
+      socioId: json['socioId'] as int,
+      monto: (json['monto'] as num).toDouble(),
+      tipo: json['tipo'] as String,
+      descripcion: json['descripcion'] as String?,
+      concepto: json['concepto'] as String?,
+      fecha: json['fecha'] as String,
+      estado: json['estado'] as String? ?? 'activo',
+    );
+  }
 }

@@ -38,6 +38,15 @@ class ApiService {
     return _handle(r);
   }
 
+  // Método DELETE agregado
+  static Future<dynamic> delete(String endpoint, {String? token}) async {
+    final r = await http.delete(
+      Uri.parse('${AppConstants.baseUrl}$endpoint'),
+      headers: await _headers(token),
+    );
+    return _handle(r);
+  }
+
   static dynamic _handle(http.Response r) {
     final body = r.body.isEmpty ? '{}' : r.body;
     final data = jsonDecode(body);

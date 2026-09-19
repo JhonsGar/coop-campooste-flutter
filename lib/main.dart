@@ -4,12 +4,15 @@ import 'providers/auth_provider.dart';
 import 'providers/producto_provider.dart';
 import 'providers/carrito_provider.dart';
 import 'providers/navigation_provider.dart';
+import 'providers/cuenta_provider.dart';        // ← NUEVO
+import 'providers/aporte_provider.dart';        // ← NUEVO
+import 'providers/prestamo_provider.dart';      // ← NUEVO
 import 'screens/auth/login_screen.dart';
 import 'screens/auth/register_screen.dart';
 import 'screens/dashboard/dashboard_screen.dart';
 import 'screens/tienda/checkout_screen.dart';
 import 'screens/admin/admin_productos_screen.dart';
-import 'screens/admin/gestion_usuarios_screen.dart';  // ✅ NUEVO
+import 'screens/admin/gestion_usuarios_screen.dart';
 import 'utils/theme.dart';
 
 void main() {
@@ -27,6 +30,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => ProductoProvider()),
         ChangeNotifierProvider(create: (_) => CarritoProvider()),
         ChangeNotifierProvider(create: (_) => NavigationProvider()),
+        ChangeNotifierProvider(create: (_) => CuentaProvider()),      // ← NUEVO
+        ChangeNotifierProvider(create: (_) => AporteProvider()),      // ← NUEVO
+        ChangeNotifierProvider(create: (_) => PrestamoProvider()),    // ← NUEVO
       ],
       child: MaterialApp(
         title: 'Coop_Campooste',
@@ -39,7 +45,7 @@ class MyApp extends StatelessWidget {
           '/dashboard': (context) => const DashboardScreen(),
           '/checkout': (context) => const CheckoutScreen(),
           '/admin-productos': (context) => const AdminProductosScreen(),
-          '/admin-usuarios': (context) => const GestionUsuariosScreen(),  // ✅ NUEVO
+          '/admin-usuarios': (context) => const GestionUsuariosScreen(),
         },
         onGenerateRoute: (settings) {
           return null;
